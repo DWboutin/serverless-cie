@@ -1,0 +1,464 @@
+@import '../../../node_modules/conecto-ui-components/dist/_base/colors';
+@import '../../../node_modules/conecto-ui-components/dist/_base/functions';
+@import '../../../node_modules/conecto-ui-components/dist/_base/mixins';
+
+.cta-dashboard {
+  margin-top: 55px;
+
+  h1 {
+    font-family: StyreneA;
+    font-size: sizeToRem(18);
+    line-height: normal;
+    color: $darkBrown;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: sizeToRem(21);
+
+    span {
+      color: $green;
+    }
+  }
+
+  .to-grid.container {
+    padding: 0;
+
+    .to-check-point {
+      margin-bottom: 10px;
+    }
+  }
+
+  .cta {
+    .row {
+      width: 100%;
+    }
+    .to-btn {
+      margin: 10px 5px;
+    }
+  }
+}
+
+#stats-section {
+  margin-top: 40px;
+  &>.row>.col {
+    display: flex;
+    margin-bottom: 40px;
+    min-height: 315px;
+
+    &>*{
+      width: 100%;
+    }
+  }
+}
+
+#roofing-listing {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  h3 {
+    margin-top: 0px;
+    margin-bottom: sizeToRem(40);
+    font-weight: normal;
+  }
+
+  .listing {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .roofing-opportunity .row {
+    border: 1px solid $veryPaleBrown;
+    border-radius: 10px;
+    height: 60px;
+    margin-bottom: 10px;
+
+    .col {
+      display: flex;
+      vertical-align: middle;
+      align-items: center;
+      border-right: 1px solid $veryPaleBrown;
+      font-family: Sailec, 'sans-serif';
+      font-size: sizeToRem(14);
+      line-height: sizeToRem(21);
+
+      &:last-child {
+        border-right: 0px solid $veryPaleBrown;
+      }
+
+      i {
+        margin-right: 5px;
+      }
+
+      .icon {
+        margin-right: 15px;
+        flex: 0 0 auto;
+      }
+
+      &:nth-child(1) {
+        flex: 0 0 auto;
+      }
+      &:nth-child(2) {
+        flex: 2;
+      }
+      &:nth-child(3) {
+        flex: 2;
+      }
+      &:nth-child(4) {
+        flex: 1.3;
+      }
+      &:nth-child(5) {
+        flex: 3;
+        justify-content: space-between;
+      }
+    }
+
+    .date {
+      font-size: sizeToRem(12);
+      color: $paleBrown;
+    }
+
+    .remainingSeats {
+      display: inline-block;
+      height: 30px;
+      font-size: sizeToRem(12);
+      line-height: 30px;
+      padding: 2px 20px 0;
+      border-radius: 5px;
+      background-color: $paleGrey;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .view-more {
+      display: none;
+    }
+
+    &:hover,
+    &.active {
+      border-color: $paleGrey;
+      background-color: $paleGrey;
+
+      .col {
+        border-color: $paleGrey;
+      }
+
+      .remainingSeats {
+        display: none;
+      }
+
+      .view-more {
+        display: inline-block;
+      }
+    }
+  }
+
+  .roofing-opportunity:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+
+@include responsive('large') {
+  #roofing-listing {
+    .roofing-opportunity .row {
+      .col {
+        &:nth-child(2) {
+          flex: 1;
+        }
+        &:nth-child(3) {
+          flex: 0 0 auto;
+          .icon {
+            margin-right: 0px;
+          }
+          .text {
+            display: none;
+          }
+        }
+        &:nth-child(4) {
+          flex: 0 0 auto;
+          .icon {
+            margin-right: 0px;
+          }
+          .text {
+            display: none;
+          }
+        }
+        &:nth-child(5) {
+          flex: 2;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+@include responsive('normal') {
+  .mobile-switch-order {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .to-grid {
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-top: 40px;
+
+        .activeForRoofing-switch {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  #roofing-listing {
+    .roofing-opportunity .row {
+      .col {
+        &:nth-child(2) {
+          flex: 1;
+        }
+        &:nth-child(3) {
+          flex: 0 0 auto;
+          .icon {
+            margin-right: 0px;
+          }
+          .text {
+            display: none;
+          }
+        }
+        &:nth-child(4) {
+          flex: 0 0 auto;
+          .icon {
+            margin-right: 0px;
+          }
+          .text {
+            display: none;
+          }
+        }
+        &:nth-child(5) {
+          flex: 1;
+          justify-content: flex-end;
+
+          .date {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive('tablet') {
+  .mobile-switch-order {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .to-grid {
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-top: 40px;
+
+        .activeForRoofing-switch {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  #stats-section>.row>.col {
+    min-height: auto;
+  }
+
+  #roofing-listing {
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .roofing-opportunity .row {
+      .col {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          flex: 2;
+        }
+        &:nth-child(3) {
+          flex: 0 0 auto;
+
+          .text {
+            display: none;
+          }
+          .icon {
+            margin-right: 0;
+          }
+        }
+        &:nth-child(4) {
+          flex: 0 0 auto;
+
+          .text {
+            display: none;
+          }
+          .icon {
+            margin-right: 0;
+          }
+        }
+        &:nth-child(5) {
+          flex: 2;
+          justify-content: flex-end;
+
+          .date,
+          .remainingSeats {
+            display: none;
+          }
+          .view-more {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive('phone to tablet') {
+  .mobile-switch-order {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .to-grid {
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-top: 40px;
+
+        .activeForRoofing-switch {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  #stats-section>.row>.col {
+    min-height: auto;
+  }
+
+  #roofing-listing {
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .roofing-opportunity .row {
+      height: auto;
+      .col {
+        border-right: 0px;
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          flex: 1 1 100%;
+          padding-top: 20px;
+          padding-bottom: 10px;
+        }
+        &:nth-child(3) {
+          flex: 1 1 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        &:nth-child(4) {
+          flex: 1 1 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        &:nth-child(5) {
+          flex: 1 1 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          justify-content: center;
+          height: 55px;
+
+          .date,
+          .remainingSeats {
+            display: none;
+          }
+          .view-more {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile-switch-order {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .to-grid {
+      width: 100%;
+
+      &:nth-child(2) {
+        margin-top: 40px;
+
+        .activeForRoofing-switch {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  #roofing-listing {
+    .roofing-opportunity .row {
+      height: auto;
+      .col {
+        border-right: 0px;
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          flex: 1 1 100%;
+          padding-top: 20px;
+          padding-bottom: 10px;
+        }
+        &:nth-child(3) {
+          flex: 1 1 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          .text {
+            display: block;
+          }
+          .icon {
+            margin-right: 15px;
+          }
+        }
+        &:nth-child(4) {
+          flex: 1 1 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+
+          .text {
+            display: block;
+          }
+          .icon {
+            margin-right: 15px;
+          }
+        }
+        &:nth-child(5) {
+          flex: 1 1 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          justify-content: center;
+          height: 55px;
+
+          .date,
+          .remainingSeats {
+            display: none;
+          }
+          .view-more {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

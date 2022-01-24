@@ -1,0 +1,510 @@
+service:
+  name: conecto-api-contacts
+
+package:
+  individually: true
+  excludeDevDependencies: false
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-webpack
+  - serverless-offline
+  - serverless-domain-manager # need to create a valid "Custom Domain Names" in API Gateway before
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  webpack:
+    webpackConfig: ../../webpack.config.js
+    includeModules: false
+    packager: 'npm'
+  splitStacks:
+    perFunction: false
+    perType: true
+  dotenv:
+    basePath: ../../
+  cors:
+    production:
+      - ${env:CORS_ORIGIN_1}
+      - ${env:CORS_ORIGIN_2}
+      - ${env:ROOFING_LANDING_1}
+      - ${env:ROOFING_LANDING_2}
+      - ${env:CORS_ORIGIN_fasttrack}
+    dev:
+      - ${env:CORS_ORIGIN_1}
+      - ${env:CORS_ORIGIN_2}
+      - ${env:ROOFING_LANDING_1}
+      - ${env:ROOFING_LANDING_2}
+      - ${env:CORS_ORIGIN_local}
+      - ${env:CORS_ORIGIN_fasttrack}
+  domains:
+    production: api.conecto.ca
+    dev: dev-api.conecto.ca
+  customDomain:
+    domainName: '${self:custom.domains.${self:custom.stage}}'
+    stage: '${self:custom.stage}'
+    basePath: ''
+    createRoute53Record: true
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+  memorySize: 1024
+  environment:
+    COMPANY_STATS_TABLE: ${file(../database/serverless.yml):custom.companyStatsTableName}
+    NOTIFICATIONS_TABLE: ${file(../database/serverless.yml):custom.notificationsTableName}
+    COMPANYSCORE_TABLE: ${file(../database/serverless.yml):custom.companyScoreTableName}
+    CONTACTSCORE_TABLE: ${file(../database/serverless.yml):custom.contactScoreTableName}
+    DEALINFOS_TABLE: ${file(../database/serverless.yml):custom.dealInfosTableName}
+    COMPANYADDRESSES_TABLE: ${file(../database/serverless.yml):custom.companyAddressesTableName}
+    CONTACTADDRESSASSIGNMENTS_TABLE: ${file(../database/serverless.yml):custom.contactAddressAssignments}
+    TZ: ${env:TZ}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - cognito-idp:*
+      Resource: arn:aws:cognito-idp:*:*:*
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: arn:aws:s3:::*
+    - Effect: Allow
+      Action:
+        - logs:*
+      Resource: arn:aws:logs:::*
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:BatchGetItem
+      Resource: "arn:aws:dynamodb:us-east-1:*:*"
+  resourcePolicy:
+    - Effect: Allow
+      Principal: "*"
+      Action: execute-api:Invoke
+      Resource:
+        - execute-api:/*/*/*
+
+
+functions:
+
+  contact-creation:
+    handler: handler.creation
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          method: post
+          path: contact
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+
+  contact-fast-creation:
+    handler: handler.fastCreation
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          method: post
+          path: contact/fast-signup
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+
+  resend-fast-creation:
+    handler: handler.resendFastCreation
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          method: post
+          path: contact/resend-fast-signup
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+
+  contact-add-user:
+    handler: handler.addUser
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          authorizer: aws_iam
+          method: post
+          path: contact/add-user
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  contact-fetch:
+    handler: handler.fetch
+    events:
+      - http:
+          authorizer: aws_iam
+          method: get
+          path: contact
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  contact-set-as-admin:
+    handler: handler.setAsAdmin
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          authorizer: aws_iam
+          method: post
+          path: contact/set-as-admin/{encryptedContactId}
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  contact-revoke-as-admin:
+    handler: handler.revokeAsAdmin
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          authorizer: aws_iam
+          method: post
+          path: contact/revoke-as-admin/{encryptedContactId}
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  contact-payment-creation:
+    handler: handler.paymentCreation
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          authorizer: aws_iam
+          method: post
+          path: contact/payment
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  contact-payment-detach:
+    handler: handler.detachSource
+    events:
+      - http:
+          authorizer: aws_iam
+          method: delete
+          path: contact/payment/{sourceId}
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  contact-payment-make-default:
+    handler: handler.makeSourceDefault
+    events:
+      - http:
+          authorizer: aws_iam
+          method: put
+          path: contact/payment/{sourceId}
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  requester-contact:
+    handler: handler.firstContact
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          authorizer: aws_iam
+          method: post
+          path: requester-contact
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  update-contact-infos:
+    handler: handler.updateInfos
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          authorizer: aws_iam
+          method: put
+          path: contact
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  accept-tos:
+    handler: handler.acceptTOS
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          authorizer: aws_iam
+          method: post
+          path: contact/accept-tos
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  contact-register-notify:
+    handler: handler.registerToNotification
+    events:
+      - http:
+          authorizer: aws_iam
+          method: post
+          path: contact-register-notify
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+  contact-set-verify-phone-false:
+    handler: handler.setVerifyPhoneFalse
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          method: get
+          path: contact-set-verify-phone-false
+          cors:
+            origins: '*'
+
+  contact-verify-phone-number:
+    handler: handler.verifyPhoneNumber
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          method: get
+          path: contact-verify-phone-number
+          cors:
+            origins: '*'
+
+  verify-single-number:
+    handler: handler.verifySinglePhoneNumber
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          method: post
+          path: contact-verify-single-phone-number
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+
+  send-intro-email:
+    handler: handler.sendIntroEmail
+    events:
+      - http:
+          method: post
+          path: contact-send-intro-email
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+
+  change-email:
+    handler: handler.changeContactEmail
+    environment:
+      USER_POOL:
+        Ref: ContactsCognitoUserPool
+    events:
+      - http:
+          authorizer: aws_iam
+          method: post
+          path: contact/change-email
+          cors:
+            origins: ${self:custom.cors.${self:custom.stage}
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - Access-Control-Allow-Origin
+              - Access-Control-Allow-Credentials
+              - Access-Control-Allow-Methods
+              - Access-Control-Allow-Headers
+              - withCredentials
+            allowCredentials: true
+            cacheControl: 'max-age=600, s-maxage=600, proxy-revalidate'
+
+
+
+
+
+resources:
+  - ${file(../cognito/user-pools/contacts.yml)}
+  - ${file(../cognito/identity-pools/contacts.yml)}
+  - Outputs:
+      ApiGatewayRestApiId:
+        Value:
+          Ref: ApiGatewayRestApi
+        Export:
+          Name: ${self:custom.stage}-ApiGatewayRestApiId
+
+      ApiGatewayRestApiRootResourceId:
+        Value:
+          Fn::GetAtt:
+            - ApiGatewayRestApi
+            - RootResourceId
+        Export:
+          Name: ${self:custom.stage}-ApiGatewayRestApiRootResourceId

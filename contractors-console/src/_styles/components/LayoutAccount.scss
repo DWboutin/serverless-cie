@@ -1,0 +1,95 @@
+@import '../../../node_modules/conecto-ui-components/dist/_base/colors';
+@import '../../../node_modules/conecto-ui-components/dist/_base/functions';
+@import '../../../node_modules/conecto-ui-components/dist/_base/mixins';
+
+#account-layout {
+  margin-top: 40px;
+
+  h1 {
+    font-family: StyreneA;
+    font-size: sizeToRem(18);
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    color: $darkBrown;
+    margin-top: 0px;
+  }
+
+  h2 {
+    font-family: StyreneA;
+    font-size: sizeToRem(14);
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    color: $darkBrown;
+    margin-top: 15px;
+  }
+
+  .address-autocomplete-card {
+    overflow: visible;
+  }
+
+  .account-side-menu {
+    display: block;
+    position: relative;
+    border: 1px solid $veryPaleBrown;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      border-bottom: 1px solid $veryPaleBrown;
+
+      &:first-child {
+        a {
+          border-radius: 10px 10px 0 0;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0px solid $veryPaleBrown;
+
+        a {
+          border-radius: 0 0 10px 10px;
+        }
+      }
+
+      a {
+        display: block;
+        position: relative;
+        font-family: Sailec;
+        font-size: sizeToRem(14);
+        font-weight: normal;
+        color: $darkBrown;
+        padding: 17px 15px 16px 20px;
+        text-decoration: none;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 5px;
+          height: 100%;
+          background-color: $darkBrown;
+          opacity: 0;
+        }
+      }
+
+      &:hover,
+      &.active {
+        a {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

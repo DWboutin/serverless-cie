@@ -1,0 +1,181 @@
+@import '../../../node_modules/conecto-ui-components/dist/_base/colors';
+@import '../../../node_modules/conecto-ui-components/dist/_base/functions';
+@import '../../../node_modules/conecto-ui-components/dist/_base/mixins';
+
+.opportunity-card {
+  margin-top: 40px;
+}
+
+.opportunity-paymentMethod-modal {
+  .modal-content {
+    .round-check {
+      background-color: #FABC3C;
+    }
+  }
+}
+.opportunity-accepted-modal,
+.call-ingoing-modal {
+  .modal-content {
+    .round-check {
+      background-color: $green;
+    }
+  }
+}
+
+.opportunity-paymentMethod-modal,
+.opportunity-accepted-modal,
+.call-ingoing-modal {
+  .modal-content {
+    padding: 80px 30px 30px;
+    text-align: center;
+
+    .round-check {
+      display: inline-block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      padding-top: 12px;
+
+      i {
+        font-size: 30px;
+        line-height: 42px;
+        color: #fff;
+      }
+    }
+
+    h2 {
+      font-family: StyreneA;
+      font-size: sizeToRem(22);
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      color: $darkBrown;
+    }
+
+    p {
+      font-family: Sailec;
+      font-size: sizeToRem(14);
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      color: $darkBrown;
+      margin-bottom: sizeToRem(40);
+    }
+  }
+}
+
+.opportunity-card {
+  .is_full_text {
+    text-align: center;
+    font-family: Sailec;
+    font-size: sizeToRem(12);
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    color: $darkBrown;
+  }
+
+  .contact-actions {
+    p {
+      font-family: Sailec;
+      font-size: sizeToRem(10);
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      text-align: left;
+      color: $paleBrown;
+      margin-bottom: 0;
+    }
+  }
+
+  .contact-actions-address {
+    font-family: Sailec;
+    font-size: sizeToRem(12);
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+    addr {
+      display: inline-block;
+      height: 44px;
+      color: $darkBrown;
+      line-height: sizeToRem(16);
+    }
+
+    strong {
+      display: block;
+      font-weight: normal;
+      color: $paleBrown;
+      margin-bottom: 5px;
+    }
+
+    .to-btn-group {
+      margin-top: 14px;
+    }
+
+    .to-btn {
+      .to-icon {
+        margin-right: 0;
+        color: $green;
+        font-size: sizeToRem(16);
+        line-height: sizeToRem(20);
+      }
+    }
+  }
+}
+
+.opportunity-mobile-buttons {
+  display: none !important;
+  padding-top: 30px;
+
+  .col:nth-child(2) {
+    text-align: right;
+  }
+}
+
+.empty-placeholder {
+  margin-top: 50px;
+  text-align: center;
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: sizeToRem(28);
+    margin-top: 30px;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
+}
+
+@include responsive('normal') {
+  .opportunity-mobile-buttons {
+    display: flex !important;
+  }
+}
+
+@include responsive('tablet') {
+  .opportunity-mobile-buttons {
+    display: flex !important;
+  }
+}
+
+@include responsive('phone to tablet') {
+  .opportunity-mobile-buttons {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .opportunity-mobile-buttons {
+    display: flex !important;
+  }
+}

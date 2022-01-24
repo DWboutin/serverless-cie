@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Conecto Entrepreneur",
+    "slug": "conecto-entrepreneur",
+    "privacy": "unlisted",
+    "sdkVersion": "33.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "0.0.31",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "primaryColor": "#26B89F",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#26B89F"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.conecto.entrepreneur",
+      "config": {
+        "googleMapsApiKey": "AIzaSyAn3_fdpkns7GBZWFD42K9w5OzjAfJnfow"
+      },
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Pour autoriser les paiement seulement au détenteur du téléphone"
+      }
+    },
+    "android": {
+      "package": "com.conecto.entrepreneur",
+      "permissions": []
+    }
+  }
+}

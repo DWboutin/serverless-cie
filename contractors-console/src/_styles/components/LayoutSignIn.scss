@@ -1,0 +1,207 @@
+@import '../../../node_modules/conecto-ui-components/dist/_base/colors';
+@import '../../../node_modules/conecto-ui-components/dist/_base/functions';
+@import '../../../node_modules/conecto-ui-components/dist/_base/mixins';
+
+#layoutSignIn-section {
+  min-height: 100vh;
+
+  .notAContractor {
+    padding-top: 30px;
+  }
+
+  .console-image {
+    padding-top: 50px;
+    height: calc(100vh - 65px);
+
+    svg {
+      min-height: 100%;
+    }
+  }
+
+  .logo-wrap {
+    width: 130px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: StyreneA;
+    font-size: sizeToRem(28);
+    line-height: normal;
+    color: $darkBrown;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: sizeToRem(21);
+
+    span {
+      color: $green;
+    }
+  }
+
+  .content-col {
+    height: calc(100vh - 130px);
+  }
+
+  .content {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .infoCard {
+    border-color: $veryPaleBrown;
+    padding: 30px 10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+
+    .to-input {
+      margin-bottom: 10px;
+    }
+  }
+
+  .buttons-section {
+    margin-top: 11px;
+
+    .access-button {
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .accountCard {
+    background-color: $paleGrey;
+    border-color: $paleGrey;
+    padding: 30px 10px;
+    margin-bottom: 20px;
+
+    p {
+      display: inline-block;
+      margin: 0;
+      font-family: Sailec;
+      font-size: sizeToRem(12);
+      line-height: 1.5em;
+    }
+
+    .col-xs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+#signup-form-step1 {
+  .to-check-point {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.signIn-passwordChange-modal {
+  .modal-content {
+    padding: 80px 30px 30px;
+    text-align: center;
+
+    h2 {
+      font-family: StyreneA;
+      font-size: sizeToRem(22);
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      color: $darkBrown;
+      margin: 0;
+    }
+
+    p {
+      font-family: Sailec;
+      font-size: sizeToRem(14);
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      color: $darkBrown;
+    }
+
+    .to-input {
+      margin-bottom: sizeToRem(10);
+    }
+
+    .to-btn {
+      margin-top: sizeToRem(10);
+    }
+  }
+}
+
+@include responsive('normal') {
+  #layoutSignIn-section {
+    .console-image {
+      svg {
+        display: block;
+        position: absolute;
+        left: -200px;
+        min-height: auto;
+        max-height: 100%;
+      }
+    }
+
+  }
+}
+
+
+@include responsive('tablet') {
+  #layoutSignIn-section {
+    .content-col {
+      min-height: calc(100vh - 130px);
+      height: auto;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .content-row {
+      min-height: 500px;
+    }
+  }
+}
+
+@include responsive('phone to tablet') {
+  #layoutSignIn-section {
+    .content-col {
+      min-height: calc(100vh - 130px);
+      height: auto;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .content-row {
+      min-height: 500px;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  #layoutSignIn-section {
+    .notAContractor {
+      .to-btn-bordered {
+        font-size: sizeToRem(10);
+      }
+    }
+
+    .accountCard {
+      text-align: center;
+
+      .col-xs {
+        display: block;
+        align-items: normal;
+        justify-content: normal;
+      }
+
+      p {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

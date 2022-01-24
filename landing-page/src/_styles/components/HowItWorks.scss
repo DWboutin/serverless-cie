@@ -1,0 +1,105 @@
+@import '../../../node_modules/conecto-ui-components/src/_components/_base/colors';
+@import '../../../node_modules/conecto-ui-components/src/_components/_base/functions';
+
+#how-it-works {
+  background-color: #F5F1E8;
+  padding-top: sizeToRem(120);
+  padding-bottom: sizeToRem(76);
+
+  h2 {
+    font-family: StyreneA;
+    font-size: sizeToRem(40);
+    line-height: sizeToRem(41);
+    color: $darkBrown;
+    margin-top: sizeToRem(50);
+    margin-bottom: sizeToRem(55);
+    font-weight: normal;
+    text-align: center;
+  }
+
+  h3 {
+    font-family: StyreneA;
+    font-size: sizeToRem(18);
+    line-height: sizeToRem(20);
+    color: $darkBrown;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: sizeToRem(14);
+    line-height: 1.5em;
+    margin: 0;
+  }
+
+  .cards-row {
+    &>.col {
+      padding-left: 0;
+      padding-right: 0;
+
+      .to-cards-swiper {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+
+        .to-card {
+          border-color: $paleBrown;
+        }
+      }
+    }
+  }
+}
+
+@include responsive('large') {
+  #how-it-works {
+    padding-top: sizeToRem(240);
+  }
+}
+
+@include responsive('phone to tablet') {
+  #how-it-works {
+    h2 {
+      font-size: sizeToRem(28);
+      margin-top: sizeToRem(59);
+      margin-bottom: sizeToRem(28);
+    }
+  }
+}
+
+@include responsive('tablet') {
+  #how-it-works {
+    h2 {
+      font-size: sizeToRem(28);
+      margin-top: sizeToRem(59);
+      margin-bottom: sizeToRem(28);
+    }
+  }
+}
+
+@include responsive('normal') {
+  #how-it-works {
+    h2 {
+      font-size: sizeToRem(34);
+    }
+
+    .cards-row {
+      .to-cards-swiper {
+        overflow: visible;
+
+        .swiper-slide {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+
+@include responsive('large') {
+  #how-it-works {
+    .cards-row {
+      .to-cards-swiper {
+        overflow: visible;
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@import '../../../node_modules/conecto-ui-components/dist/_base/colors';
+@import '../../../node_modules/conecto-ui-components/dist/_base/functions';
+@import '../../../node_modules/conecto-ui-components/dist/_base/mixins';
+
+#layoutDashboard-section,
+#layoutDashboard-404 {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .to-site-header {
+    .to-btn-dropdown-menu {
+      li {
+        a {
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+
+  .to-navigation {
+    max-width: 520px;
+    margin: 0 auto 0 4%;
+  }
+
+  &>main {
+    flex: 1;
+  }
+
+  &>footer {
+    display: block;
+    position: relative;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+    background: url('../_styles/svg/footer-bush.svg') no-repeat bottom center;
+
+    .logo-wrap {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+#layoutDashboard-404 {
+  text-align: center;
+
+  .support-button {
+    text-align: right;
+  }
+
+  main > .container {
+    margin-top: 50px;
+  }
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: sizeToRem(28);
+    margin-top: 30px;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
+}
+
+.to-mobile-menu {
+  padding-top: 82px;
+
+  .footer {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .mobile-account-links {
+    text-align: center;
+
+    .mobile-account-link {
+      border-top: 1px solid $veryPaleBrown;
+      padding: 20px 40px;
+
+      &:last-child {
+        border-bottom: 1px solid $veryPaleBrown;
+      }
+    }
+
+    .mobile-account-link-logout {
+      text-align: center;
+    }
+  }
+}
+
+#to-switch-activeForRoofing {
+  float: right;
+  .to-switch-wrap {
+    flex-direction: row-reverse;
+  }
+}
+
+@include responsive('large') {
+  #layoutDashboard-section .to-navigation {
+    max-width: 520px;
+    margin: 0 auto 0;
+  }
+}
+
+@include responsive('normal') {
+  #layoutDashboard-section .to-navigation {
+    max-width: 520px;
+    margin: 0 auto 0;
+  }
+}
+
+@include responsive('tablet') {
+  #layoutDashboard-section .to-navigation {
+    max-width: 520px;
+    margin: 0 auto 0;
+  }
+}
+
+@include responsive('phone to tablet') {
+  #layoutDashboard-section .to-navigation {
+    max-width: 520px;
+    margin: 0 auto 0;
+  }
+}
+
+@media (max-width: 640px) {
+  #layoutDashboard-section .to-navigation {
+    max-width: 520px;
+    margin: 0 auto 0;
+  }
+}

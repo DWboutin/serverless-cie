@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>217419280180-4ripr30v4mo6hvs04q3tv5s261atl90o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.217419280180-4ripr30v4mo6hvs04q3tv5s261atl90o</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDFAVR9L0fsTckPa4U4C52nGpI3Rj9SUcI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>217419280180</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.conecto.entrepreneur</string>
+	<key>PROJECT_ID</key>
+	<string>dev-conecto</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dev-conecto.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:217419280180:ios:739e9d1cdba2f8fd</string>
+	<key>DATABASE_URL</key>
+	<string>https://dev-conecto.firebaseio.com</string>
+</dict>
+</plist>

@@ -1,0 +1,99 @@
+@import '../../../node_modules/conecto-ui-components/src/_components/_base/colors';
+@import '../../../node_modules/conecto-ui-components/src/_components/_base/functions';
+
+#made-with-conecto {
+  padding-bottom: 100px;
+
+  h2 {
+    font-family: StyreneA;
+    font-size: sizeToRem(40);
+    line-height: sizeToRem(41);
+    color: $darkBrown;
+    margin-top: sizeToRem(80);
+    margin-bottom: sizeToRem(11);
+    font-weight: normal;
+    text-align: center;
+  }
+
+  p {
+    font-size: sizeToRem(14);
+    line-height: 1.5em;
+    margin: 0;
+    text-align: center;
+    margin-bottom: sizeToRem(45);
+  }
+
+  .cards-row {
+    &>.col {
+      padding-left: 0;
+      padding-right: 0;
+
+      .to-cards-swiper {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+      }
+    }
+  }
+}
+
+#made-with-conecto-swiper {
+  .swiper-wrapper .swiper-slide {
+    max-width: none !important;
+  }
+  .to-card {
+    position: relative;
+    padding: 0px;
+    border: 0px solid transparent;
+    height: 400px;
+
+    .gatsby-image-wrapper {
+      position: absolute !important;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .city {
+      display: inline-block;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      height: 35px;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 11px 19px 11px;
+      font-family: Sailec;
+      font-size: sizeToRem(14);
+      color: $darkBrown;
+
+      i {
+        display: inline-block;
+        position: relative;
+        color: $roofing;
+        top: -2px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+@include responsive('phone to tablet') {
+  #made-with-conecto {
+    h2 {
+      font-size: sizeToRem(28);
+      margin-top: sizeToRem(59);
+      margin-bottom: sizeToRem(28);
+    }
+  }
+}
+
+@include responsive('tablet') {
+  #made-with-conecto {
+    h2 {
+      font-size: sizeToRem(28);
+      margin-top: sizeToRem(59);
+      margin-bottom: sizeToRem(28);
+    }
+  }
+}

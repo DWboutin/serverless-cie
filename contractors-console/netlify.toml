@@ -1,0 +1,96 @@
+[[headers]]
+  for = "*.js" # js files should be set this way
+  [headers.values]
+    Cache-Control = "public, max-age=2629743"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+[[headers]]
+  for = "*.css" # css files too
+  [headers.values]
+    Cache-Control = "public, max-age=2629743"
+
+[[headers]]
+  for = "*.eot" # font files
+  [headers.values]
+    Cache-Control = "public, max-age=31556926"
+[[headers]]
+  for = "*.woff" # font files
+  [headers.values]
+    Cache-Control = "public, max-age=31556926"
+[[headers]]
+  for = "*.woff2" # font files
+  [headers.values]
+    Cache-Control = "public, max-age=31556926"
+[[headers]]
+  for = "*.ttf" # font files
+  [headers.values]
+    Cache-Control = "public, max-age=31556926"
+
+
+[context.production.environment]
+  API_GATEWAY_URL = "https://api.conecto.ca"
+  API_GATEWAY_REGION = "us-east-1"
+  S3_NAME = "production-static-maps"
+
+  GTM_ID = "GTM-54FB82R"
+
+  USER_POOL_ID = "us-east-1_Tl2p5eAvh"
+  USER_POOL_REGION = "us-east-1"
+  IDENTITY_POOL_ID = "us-east-1:c259c3e8-7339-408c-b32c-74e8199988e4"
+  USER_POOL_CLIENT_ID = "4b90l7nqpk52frkj7epaphm3j7"
+
+  STRIPE_PT_KEY = "pk_live_AUeyNXvpRWvOgkXTM5RjA4Jz"
+  GOOGLEMAP_API_KEY = "AIzaSyD81hNpyP2mL0vgZ1YYKGhpJ-b3ILrfB1A"
+
+  LIMIT_COMPANY_ADDRESSES = "5"
+  FIREBASE_APIKEY = "AIzaSyAU7L87Ad9gQy8EshgMwvlk7rB9Bh3S7MY"
+  FIREBASE_FIXED_SENDER_ID = "103953800507"
+  FIREBASE_SENDER_ID = "284405445779"
+
+[context.branch-deploy.environment]
+  API_GATEWAY_URL = "https://dev-api.conecto.ca"
+  API_GATEWAY_REGION = "us-east-1"
+
+  S3_NAME = "dev-static-maps"
+
+  GTM_ID = "GTM-PGJRNLJ"
+
+  USER_POOL_ID = "us-east-1_hI7aRzxtL"
+  USER_POOL_REGION = "us-east-1"
+  IDENTITY_POOL_ID = "us-east-1:8c510b09-63e7-4a93-8e1b-a7c4bc85e530"
+  USER_POOL_CLIENT_ID = "3ae9qfie0jreb0f03ueht88f6q"
+
+  STRIPE_PT_KEY = "pk_test_LX9xvTNiXSJLJ5XkuQa2D3SX"
+  GOOGLEMAP_API_KEY = "AIzaSyCbG_fT2IbSNOEcHXUo9MYY_6hvZKIQ17E"
+
+  LIMIT_COMPANY_ADDRESSES = "5"
+  FIREBASE_APIKEY = "AIzaSyBxVWL0SJDsJxVx5PNIPMYNAc1735Xu3Pw"
+  FIREBASE_FIXED_SENDER_ID = "103953800507"
+  FIREBASE_SENDER_ID = "217419280180"
+
+[context.local_dev.environment]
+  SITE_URL = "https://conecto-local.ngrok.io"
+  ROOFING_SITE_URL = "https://toiture.conecto.ca"
+  BASE_LANGUAGE = "fr"
+  SECOND_LANGUAGE = "en"
+  BASE_SITE_TITLE = "TOML Conecto Entrepreneur"
+  SITE_LANG_URL = "https://conecto-local.ngrok.io"
+  S3_NAME = "dev-static-maps"
+
+  API_GATEWAY_URL = "https://dev-api.conecto.ca"
+  API_GATEWAY_REGION = "us-east-1"
+
+  GTM_ID = "GTM-54FB82R"
+
+  USER_POOL_ID = "us-east-1_hI7aRzxtL"
+  USER_POOL_REGION = "us-east-1"
+  IDENTITY_POOL_ID = "us-east-1:8c510b09-63e7-4a93-8e1b-a7c4bc85e530"
+  USER_POOL_CLIENT_ID = "3ae9qfie0jreb0f03ueht88f6q"
+
+  STRIPE_PT_KEY = "pk_test_LX9xvTNiXSJLJ5XkuQa2D3SX"
+  GOOGLEMAP_API_KEY = "AIzaSyCbG_fT2IbSNOEcHXUo9MYY_6hvZKIQ17E"
+
+  LIMIT_COMPANY_ADDRESSES = "5"
+  FIREBASE_APIKEY = "AIzaSyBxVWL0SJDsJxVx5PNIPMYNAc1735Xu3Pw"
+  FIREBASE_FIXED_SENDER_ID = "103953800507"
+  FIREBASE_SENDER_ID = "217419280180"

@@ -1,0 +1,36 @@
+@import '../../../node_modules/conecto-ui-components/dist/_base/colors';
+@import '../../../node_modules/conecto-ui-components/dist/_base/functions';
+@import '../../../node_modules/conecto-ui-components/dist/_base/mixins';
+
+.cta-section {
+  .to-card.to-card-cta {
+    .content {
+      background-color: #fff;
+
+      p {
+        color: $darkBrown;
+        margin: 0;
+        font-size: sizeToRem(14)
+      }
+    }
+    .cta {
+      background-color: $veryPaleBrown;
+      border-color: $veryPaleBrown;
+
+      .image .image-wrap svg {
+        width: 100%;
+        height: auto;
+        max-height: none;
+      }
+    }
+  }
+
+  h2 {
+    font-family: StyreneA;
+    font-size: sizeToRem(18);
+    line-height: sizeToRem(19);
+    color: $darkBrown;
+    font-weight: normal;
+    margin-top: 0px;
+  }
+}

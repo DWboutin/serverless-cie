@@ -1,0 +1,299 @@
+@import '../../../node_modules/conecto-ui-components/dist/_base/colors';
+@import '../../../node_modules/conecto-ui-components/dist/_base/functions';
+@import '../../../node_modules/conecto-ui-components/dist/_base/mixins';
+
+#signup-step2 {
+  min-height: 100vh;
+  background: url('../_styles/svg/signup-bush.svg') no-repeat bottom left;
+
+  .conditionText {
+    font-size: sizeToRem(12);
+    font-family: Sailec;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  .logo-wrap {
+    width: 130px;
+    padding-top: 30px;
+  }
+
+  h1 {
+    font-family: StyreneA;
+    font-size: sizeToRem(40);
+    line-height: sizeToRem(41);
+    color: $darkBrown;
+    font-weight: normal;
+    margin-top: sizeToRem(23);
+    margin-bottom: 0;
+
+    &>span {
+      color: $green;
+    }
+  }
+
+  h2 {
+    font-family: StyreneA;
+    font-size: sizeToRem(18);
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    color: $darkBrown;
+    margin-top: 0;
+    margin-bottom: sizeToRem(20);
+  }
+
+  h3 {
+    font-family: StyreneA;
+    font-size: sizeToRem(14);
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    color: $darkBrown;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-family: Sailec;
+    font-size: sizeToRem(14);
+    font-weight: normal;
+    line-height: normal;
+    color: $darkBrown;
+    margin-top: 0;
+    margin-bottom: sizeToRem(23);
+  }
+
+  address {
+    font-style: normal;
+    font-family: Sailec;
+    font-size: sizeToRem(12);
+    color: $darkBrown;
+  }
+
+  .contractor-man {
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+
+    svg {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 75%;
+      background-color: $paleGreen;
+      border-radius: 10px;
+      z-index: 0;
+    }
+  }
+
+  .form {
+    .to-card {
+      margin-top: 40px;
+      border-color: $veryPaleBrown;
+      background-color: #fff;
+      overflow: visible;
+
+      .to-input,
+      .to-dropdown-list,
+      .to-address-autocomplete {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .submit-section {
+      margin-top: 0px;
+      margin-bottom: sizeToRem(40);
+      border-color: $paleGrey;
+      background-color: $paleGrey;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+  }
+
+  .acceptation-section {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    h2 {
+      margin-bottom: sizeToRem(14)
+    }
+  }
+
+  .submit-section {
+    .to-btn:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.signup-tos-confirmation-modal,
+.afterSignup-tos-confirmation-modal {
+  .modal-content {
+    position: relative;
+    height: 100%;
+    padding: 80px 30px 30px;
+    text-align: center;
+
+    .round-check {
+      display: inline-block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+      background-color: $green;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      padding-top: 12px;
+
+      i {
+        font-size: 30px;
+        line-height: 44px;
+        color: #fff;
+      }
+    }
+
+    h2 {
+      font-family: StyreneA;
+      font-size: sizeToRem(20);
+      margin: 0;
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      color: $darkBrown;
+    }
+
+    p {
+      font-family: Sailec;
+      font-size: sizeToRem(14);
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      color: $darkBrown;
+      margin-bottom: sizeToRem(40);
+    }
+
+    .tos_wrap {
+      display: block;
+      position: relative;
+      height: 70%;
+      max-height: 500px;
+      overflow-y: scroll;
+      margin: 30px -30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-top: 1px solid $veryPaleBrown;
+      border-bottom: 1px solid $veryPaleBrown;
+      text-align: left;
+
+      h3 {
+        font-family: StyreneA;
+        font-size: sizeToRem(16);
+        font-weight: normal;
+        line-height: normal;
+        letter-spacing: 0.02em;
+        color: $darkBrown;
+      }
+
+      p, ul li{
+        font-family: Sailec;
+        font-size: sizeToRem(12);
+        font-weight: normal;
+        line-height: normal;
+        letter-spacing: 0.02em;
+        color: $darkBrown;
+        margin-bottom: sizeToRem(20);
+      }
+    }
+
+    small {
+      display: block;
+      position: relative;
+      text-align: center;
+      padding: 1em 0;
+    }
+  }
+}
+
+.afterSignup-tos-confirmation-modal {
+  .to-modal-card__close-btn {
+    display: none !important;
+  }
+}
+
+.signUp-confirmation-modal,
+.password-reset-modal {
+  .modal-content {
+    padding: 80px 30px 30px;
+    text-align: center;
+
+    .round-check {
+      display: inline-block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+      background-color: $green;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      padding-top: 12px;
+
+      i {
+        font-size: 40px;
+        color: #fff;
+      }
+    }
+
+    h2 {
+      font-family: StyreneA;
+      font-size: sizeToRem(22);
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      color: $darkBrown;
+    }
+
+    p {
+      font-family: Sailec;
+      font-size: sizeToRem(14);
+      font-weight: normal;
+      line-height: normal;
+      letter-spacing: 0.02em;
+      color: $darkBrown;
+      margin-bottom: sizeToRem(40);
+    }
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 992px) {
+  #signup-step2 {
+    .submit-section {
+      text-align: center;
+
+      .to-btn:first-child {
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

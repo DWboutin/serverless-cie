@@ -1,0 +1,210 @@
+@import '../../../node_modules/conecto-ui-components/dist/_base/colors';
+@import '../../../node_modules/conecto-ui-components/dist/_base/functions';
+@import '../../../node_modules/conecto-ui-components/dist/_base/mixins';
+
+#viewport-section-bg {
+  background: url('../images/roofing-house-bg.jpg') no-repeat top 260px left;
+  background-size: 100% auto;
+}
+
+#viewport-section {
+  display: block;
+
+  &>.row {
+    position: relative;
+  }
+
+  .tos-link {
+    display: inline-block;
+    color: $darkBrown;
+    font-size: sizeToRem(12);
+    margin-top: 10px;
+
+    &:hover {
+      color: $roofing;
+    }
+  }
+
+  h1 {
+    font-family: StyreneA;
+    font-size: sizeToRem(40);
+    line-height: sizeToRem(41);
+    color: $darkBrown;
+    margin-top: sizeToRem(40);
+    margin-bottom: sizeToRem(20);
+    font-weight: normal;
+  }
+
+  .to-check-point {
+    margin-bottom: sizeToRem(10);
+  }
+
+  .text-content {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .roofing-image {
+    display: block;
+    position: relative;
+    z-index: 0;
+    margin-top: 20px;
+
+    svg {
+      width: 100%;
+      height: auto !important;
+    }
+  }
+
+  .roofing-mobile-image {
+    display: none;
+    text-align: center;
+
+    svg {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  .request-soumission-btn {
+    display: none;
+    position: relative;
+    text-align: center;
+    margin-top: 28px;
+    margin-bottom: 30px;
+  }
+
+  .form-container {
+    display: block;
+    position: relative;
+  }
+}
+
+@include responsive('x-large') {
+  #viewport-section-bg {
+    background-position: top 280px left;
+  }
+
+  #viewport-section {
+    min-height: 675px;
+
+    .form-col {
+      position: relative;
+    }
+
+    .roofing-image {
+      display: none;
+    }
+
+    .form-container {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 15px;
+      width: 100%;
+    }
+  }
+}
+
+@include responsive('large') {
+  #viewport-section-bg {
+    background-position: top 280px left;
+  }
+
+  #viewport-section {
+    min-height: 600px;
+
+    .form-col {
+      position: relative;
+    }
+
+    .roofing-image {
+      display: none;
+    }
+
+    .form-container {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 15px;
+      width: 100%;
+    }
+  }
+}
+
+@include responsive('normal') {
+  #viewport-section-bg {
+    background: none;
+  }
+
+  #viewport-section {
+    padding-bottom: sizeToRem(40);
+
+    .roofing-image {
+      display: none;
+    }
+  }
+}
+
+@include responsive('tablet') {
+  #viewport-section-bg {
+    background: none;
+  }
+
+  #viewport-section {
+    height: auto;
+
+    .request-soumission-btn {
+      display: block;
+      position: relative;
+      margin-top: 28px;
+      margin-bottom: 30px;
+    }
+
+    .roofing-image {
+      display: none;
+    }
+
+    .roofing-mobile-image {
+      display: block;
+      position: relative;
+      height: 283px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+}
+
+@include responsive('phone to tablet') {
+  #viewport-section-bg {
+    background: none;
+  }
+
+  #viewport-section {
+    height: auto;
+
+    .roofing-image {
+      display: none;
+    }
+
+    .request-soumission-btn {
+      display: block;
+      position: relative;
+      margin-top: 28px;
+      margin-bottom: 30px;
+    }
+
+    .roofing-image {
+      display: none;
+    }
+
+    .roofing-mobile-image {
+      display: block;
+      position: relative;
+      height: 253px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+}

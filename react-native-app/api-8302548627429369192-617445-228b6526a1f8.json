@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "api-8302548627429369192-617445",
+  "private_key_id": "228b6526a1f8d90ff9e2b7b6ac8d02d35a26b502",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC4rCCHV0V2CEIp\nHHD2OuS3xB9mtvk5oMz6aEW4UdJkfhn+wvYrOMwH1avUF8UUDT4ZmVVZsxf4XfHA\n8Op3AquHjStvhB1BJTPwWbcTDxc+insHco+JYqiofsbjmPg6646aCqaFidS2jfi9\nhTU2YstSLt+6eGObJiVQoxVx/avvgZ57R6htTRO1/AgITzm+wjTjKLMk3atP6fGC\njQq8LNF+3R6csrVpqhS2u9iT5Rxw7omj+u06FX3mwyVZZFEdJrRo3CuN/KoSOmD7\n+X8N3mf5sZBPaP8VmpMD4gzQjG2B72Jt7rQn5OlxJSHHXEaN+wv3o4QeH3xjjfwQ\nLKxJPdj9AgMBAAECggEAAW06MeffmACK7k4tCzuIpJv/XoF5KtPn5K++773mFIB3\nsYtB1plxbhNDz0QnWB1prOeNcr90JtpaJN9XmF350EOSO27RJ3DJPKKczCj+/EZn\nZx1tJ9nbK4FE03sZ89T51lo3T7gxLGXe+/ii+oDh4qHzeLlqxforkKEDgeY8fugS\nL5hTWcQPSLN0SwdxAjWMl/gCcty9T7dasJJAlk3ExVkPJEa5Cg9BSKnvMogtDeno\n2jt5RJs88HgRqXpHYtoclKJg13Gk4WWFaGEMuBmOyq8rRMfOiRAcO1cVBAzUJ1ut\n2hsmsCvF8lEnajTthaseLvw/JmMNIZzoa/PmYN4OKwKBgQDbMDQkEOP0AZrMvFin\nBzZEB3boS7eQ3QubEOL1T1udoV7GA+GNxHJL38fDGw8KaXw063ztQuIBq6gF4I8P\n46/rYfLCNK4EHczpKNaB+5pt/dBCnJpMBHS7o0M7Vsj77WbcHrF+XoHffcDE/Wmu\n3ymiVDukpw62TanpPQNFDxzAbwKBgQDXr/GEAui4K/EWClCoOy7nV+AZYv1DBcVo\nOq5nDkl0OTMQLEbBnkstwPMKqyjmPy9nGrkBseBWNDmlsWRqq6LcEOS4q7tlkVLR\nubmdySnKB22jrlHaBAdntYIr3ac6RWK/walRB2WB8QPsQXTt2A6eONq75wLcGTVP\nhS7MN7xbUwKBgEc8BEYQYzUi7F9LevhVpLI5RtC6At+Gp0XvGAOnldvF3Ro3mq9L\nP+YexTpIafv1SlOckM4/JVprokC+uV/tnHfALnglTMSztqu0BPrbfVXv3iY35QF9\nlT6CEdCQJOOTRRGWvBKYvlaW9PZQcW9OwaYq//NEA8kFtonBtXVVMv/rAoGAF7cq\n0R8Yw5dhTNEZiUXopFtPMrtlqYbq68j4ADDb9sGLUc3sgcGL9p3um0+ykY6FAcs4\naG1Mg23+oK9eoTP6FkRtQbjwQ/y0pIbNWAIUbDhg38x9B4HF5qtYgsY+avPSJc9/\ndH9hs+XyTnnsB3LoOJF7y4ldESJccD/uo1nFhi0CgYEAvlg0fLqbCWH1B38P5Tft\n91G471LvV1woNM/Q+dQEc0bn2hhRXDP5xZd9zovQFaK5uGO94EubFsG2du5llyz8\nCjSL9iY7RdS8McKOcMSCdfJe/ldiWKqefJhHi7JWRsXAHoF3hGFSzm5bPTbUurUz\nvUFybmMb51VVXQnt4hrMVO8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "conecto-entrepreneur@api-8302548627429369192-617445.iam.gserviceaccount.com",
+  "client_id": "113208085270053025462",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/conecto-entrepreneur%40api-8302548627429369192-617445.iam.gserviceaccount.com"
+}
