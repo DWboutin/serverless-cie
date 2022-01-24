@@ -1,0 +1,57 @@
+@import '../_base/colors';
+
+.to-table {
+  overflow: hidden;
+
+  table {
+    width: 100%;
+
+    th {
+      font-family: 'StyreneA';
+      font-style: normal;
+      font-weight: normal;
+      font-size: sizeToRem(12);
+      line-height: sizeToRem(18);
+      border-bottom: 1px solid $veryPaleBrown;
+      padding: 15px 10px 15px 0px;
+      text-align: left;
+    }
+    td {
+      font-family: 'Sailec';
+      font-style: normal;
+      font-weight: normal;
+      font-size: sizeToRem(14);
+      line-height: sizeToRem(18);
+      padding: 7px 10px 7px 0px;
+      text-align: left;
+    }
+    th.text-right, td.text-right {
+      text-align: right;
+    }
+    tbody {
+      tr {
+        td:last-child {
+          padding-right: 0px;
+        }
+      }
+
+      tr:first-child {
+        td {
+          padding-top: 15px;
+        }
+      }
+      tr:last-child {
+        td {
+          padding-bottom: 15px;
+        }
+      }
+    }
+    tfoot {
+      tr {
+        td {
+          border-top: 1px solid $veryPaleBrown;
+        }
+      }
+    }
+  }
+}

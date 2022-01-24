@@ -1,0 +1,36 @@
+@import '../_base/colors';
+
+.to-logo {
+  display: inline-block;
+  position: relative;
+  clear: both;
+
+  .to-logo-wrapper {
+    display: inline-block;
+    margin-top: 2px;
+  }
+
+  &.to-logo-with-suffix {
+    .to-logo-wrapper {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
+  .to-logo-suffix {
+    display: inline-block;
+    position: relative;
+    float: left;
+    height: 20px;
+    padding: 2px 10px;
+    color: #fff;
+    font-family: "GT Pressura", Arial, 'sans-serif';
+    font-size: sizeToRem(14);
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: $green;
+    top: 4px;
+  }
+}

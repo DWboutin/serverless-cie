@@ -1,0 +1,192 @@
+@import '../_base/colors';
+@import '../_base/functions';
+
+$defaultTop: 60px;
+$defaultBottom: 20px;
+$defaultMargin: 20px;
+$defaultWidth: 380px;
+
+.to-notification {
+  position: fixed;
+  z-index: 1010;
+  width: $defaultWidth;
+  max-width: calc(100vw - 32px);
+
+  &-topLeft {
+    left: 0;
+    top: $defaultTop;
+    bottom: auto;
+    margin-left: $defaultMargin;
+  }
+
+  &-topRight {
+    right: 0;
+    top: $defaultTop;
+    bottom: auto;
+    margin-right: $defaultMargin;
+  }
+
+  &-bottomLeft {
+    left: 0;
+    top: auto;
+    bottom: $defaultBottom;
+    margin-left: $defaultMargin;
+  }
+
+  &-bottomRight {
+    right: 0;
+    top: auto;
+    bottom: $defaultBottom;
+    margin-right: $defaultMargin;
+  }
+
+  &-topCenter {
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+    bottom: $defaultBottom;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-bottomCenter {
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+    bottom: $defaultBottom;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-notice {
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid $veryPaleBrown;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &-close {
+      display: inline-block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 16px;
+      height: 16px;
+      background-color: $paleGrey;
+      padding: 3px 2px 3px 2px;
+      border-radius: 50%;
+      font-size: 10px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+
+      &:hover,
+      &:active {
+        background-color: $darkBrown;
+        color: #fff;
+        outline: none;
+      }
+    }
+
+    &-message {
+      display: inline-block;
+      position: relative;
+      font-family: Sailec, Arial, Helvetica, sans-serif;
+      font-weight: normal;
+      font-size: sizeToRem(14);
+      line-height: 1.5em;
+      color: $darkBrown;
+      margin-bottom: 1em;
+      padding-right: 30px;
+    }
+
+    &-description {
+      display: inline-block;
+      position: relative;
+      font-family: Sailec, Arial, Helvetica, sans-serif;
+      font-weight: normal;
+      font-size: sizeToRem(12);
+      line-height: 1.5em;
+      color: $darkBrown;
+    }
+  }
+
+  &-fade-enter,
+  &-fade-appear {
+    opacity: 0;
+    animation-duration: 0.2s;
+    animation-play-state: paused;
+    animation-timing-function: $tansitionEase;
+  }
+
+  &-fade-leave {
+    animation-duration: 0.2s;
+    animation-play-state: paused;
+    animation-timing-function: $tansitionEase;
+  }
+
+  &-fade-enter.to-notification-fade-enter-active,
+  &-fade-appear.to-notification-fade-appear-active {
+    will-change: left, opacity;
+    animation-play-state: running;
+  }
+
+  &-fade-leave.to-notification-fade-leave-active {
+    will-change: max-height, height, opacity;
+    animation-name: NotificationFadeOut;
+    animation-play-state: running;
+  }
+
+  &.to-notification-topRight .to-notification-fade-enter-active,
+  &.to-notification-topRight .to-notification-fade-appear-active,
+  &.to-notification-bottomRight .to-notification-fade-enter-active,
+  &.to-notification-bottomRight .to-notification-fade-appear-active {
+    animation-name: NotificationRightFadeIn;
+  }
+  &.to-notification-topLeft .to-notification-fade-enter-active,
+  &.to-notification-topLeft .to-notification-fade-appear-active,
+  &.to-notification-bottomLeft .to-notification-fade-enter-active,
+  &.to-notification-bottomLeft .to-notification-fade-appear-active {
+    animation-name: NotificationLeftFadeIn;
+  }
+}
+
+@keyframes NotificationRightFadeIn {
+  0% {
+    left: $defaultWidth;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes NotificationLeftFadeIn {
+  0% {
+    right: $defaultWidth;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes NotificationFadeOut {
+  0% {
+    max-height: 150px;
+    margin-bottom: $defaultBottom;
+    padding-top: $defaultBottom;
+    padding-bottom: $defaultBottom;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+  }
+}

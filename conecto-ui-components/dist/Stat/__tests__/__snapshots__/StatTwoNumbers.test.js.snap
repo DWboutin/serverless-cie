@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatTwoNumbers should match snapshot 1`] = `
+<CardStat
+  className="to-stat-two-numbers"
+  icon={
+    <Icon
+      type="notification"
+    />
+  }
+  title="Taux d'accceptation"
+  type="bordered"
+>
+  <div
+    className="number disabled"
+  >
+    <div
+      className="card"
+    >
+      <span>
+        <CountUp$$1
+          decimal="."
+          decimals={0}
+          delay={null}
+          duration="2"
+          easingFn={null}
+          end={45}
+          formattingFn={null}
+          onEnd={[Function]}
+          onPauseResume={[Function]}
+          onReset={[Function]}
+          onStart={[Function]}
+          onUpdate={[Function]}
+          prefix=""
+          redraw={false}
+          separator=""
+          start={0}
+          suffix=""
+          useEasing={true}
+        />
+        %
+      </span>
+    </div>
+    <div
+      className="notice"
+    >
+      Courriel
+    </div>
+  </div>
+  <div
+    className="number false"
+  >
+    <div
+      className="card"
+    >
+      <span>
+        <CountUp$$1
+          decimal="."
+          decimals={0}
+          delay={null}
+          duration="2"
+          easingFn={null}
+          end={66}
+          formattingFn={null}
+          onEnd={[Function]}
+          onPauseResume={[Function]}
+          onReset={[Function]}
+          onStart={[Function]}
+          onUpdate={[Function]}
+          prefix=""
+          redraw={false}
+          separator=""
+          start={0}
+          suffix=""
+          useEasing={true}
+        />
+        h
+      </span>
+    </div>
+    <div
+      className="notice"
+    >
+      Téléphone
+    </div>
+  </div>
+</CardStat>
+`;

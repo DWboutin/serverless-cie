@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs should match snapshot with a fixedItem 1`] = `
+<div
+  className="to-tabs title-pos-top"
+>
+  <nav>
+    <ul>
+      <TabTitle
+        active={true}
+        clickDisabled={false}
+        index={0}
+        key=".0"
+        onClick={[Function]}
+        title="Test title 1"
+      />
+      <TabTitle
+        active={false}
+        clickDisabled={false}
+        index={1}
+        key=".1"
+        onClick={[Function]}
+        title="Test title 2"
+      />
+      <TabTitle
+        active={false}
+        clickDisabled={false}
+        index={2}
+        key=".2"
+        onClick={[Function]}
+        title="Test title 3"
+      />
+    </ul>
+  </nav>
+  <div
+    className="to-tabs-wrap"
+  >
+    <div
+      className="to-tabs-panels"
+      style={
+        Object {
+          "marginLeft": "0%",
+        }
+      }
+    >
+      <TabPanel
+        clickDisabled={false}
+        inactive={false}
+        key=".0"
+        title="Test title 1"
+      >
+        Test panel 1
+      </TabPanel>
+      <TabPanel
+        clickDisabled={false}
+        inactive={true}
+        key=".1"
+        title="Test title 2"
+      >
+        Test panel 2
+      </TabPanel>
+      <TabPanel
+        clickDisabled={false}
+        inactive={true}
+        key=".2"
+        title="Test title 3"
+      >
+        Test panel 3
+      </TabPanel>
+    </div>
+    <div
+      className="fixed-item"
+    >
+      <CustomComp
+        selectedIndex={0}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs should match snapshot with titles at the bottom 1`] = `
+<div
+  className="to-tabs title-pos-bottom"
+>
+  <div
+    className="to-tabs-wrap"
+  >
+    <div
+      className="to-tabs-panels"
+      style={
+        Object {
+          "marginLeft": "0%",
+        }
+      }
+    >
+      <TabPanel
+        clickDisabled={false}
+        inactive={false}
+        key=".0"
+        title="Test title 1"
+      >
+        Test panel 1
+      </TabPanel>
+      <TabPanel
+        clickDisabled={false}
+        inactive={true}
+        key=".1"
+        title="Test title 2"
+      >
+        Test panel 2
+      </TabPanel>
+      <TabPanel
+        clickDisabled={false}
+        inactive={true}
+        key=".2"
+        title="Test title 3"
+      >
+        Test panel 3
+      </TabPanel>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <TabTitle
+        active={true}
+        clickDisabled={false}
+        index={0}
+        key=".0"
+        onClick={[Function]}
+        title="Test title 1"
+      />
+      <TabTitle
+        active={false}
+        clickDisabled={false}
+        index={1}
+        key=".1"
+        onClick={[Function]}
+        title="Test title 2"
+      />
+      <TabTitle
+        active={false}
+        clickDisabled={false}
+        index={2}
+        key=".2"
+        onClick={[Function]}
+        title="Test title 3"
+      />
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`Tabs should match snapshot with titles at the top by default 1`] = `
+<div
+  className="to-tabs title-pos-top"
+>
+  <nav>
+    <ul>
+      <TabTitle
+        active={true}
+        clickDisabled={false}
+        index={0}
+        key=".0"
+        onClick={[Function]}
+        title="Test title 1"
+      />
+      <TabTitle
+        active={false}
+        clickDisabled={false}
+        index={1}
+        key=".1"
+        onClick={[Function]}
+        title="Test title 2"
+      />
+      <TabTitle
+        active={false}
+        clickDisabled={false}
+        index={2}
+        key=".2"
+        onClick={[Function]}
+        title="Test title 3"
+      />
+    </ul>
+  </nav>
+  <div
+    className="to-tabs-wrap"
+  >
+    <div
+      className="to-tabs-panels"
+      style={
+        Object {
+          "marginLeft": "0%",
+        }
+      }
+    >
+      <TabPanel
+        clickDisabled={false}
+        inactive={false}
+        key=".0"
+        title="Test title 1"
+      >
+        Test panel 1
+      </TabPanel>
+      <TabPanel
+        clickDisabled={false}
+        inactive={true}
+        key=".1"
+        title="Test title 2"
+      >
+        Test panel 2
+      </TabPanel>
+      <TabPanel
+        clickDisabled={false}
+        inactive={true}
+        key=".2"
+        title="Test title 3"
+      >
+        Test panel 3
+      </TabPanel>
+    </div>
+  </div>
+</div>
+`;

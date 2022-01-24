@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row should match snapshot 1`] = `
+<div
+  className="row"
+>
+  Test
+</div>
+`;
+
+exports[`Row should match snapshot with a Col 1`] = `
+<Row>
+  <div
+    className="row"
+  >
+    <Col
+      alignMiddle={false}
+      fullHeight={false}
+      reverse={false}
+    >
+      <div
+        className="col col-xs"
+      >
+        Test
+      </div>
+    </Col>
+  </div>
+</Row>
+`;

@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddressAutocomplete should match mounted snapshot 1`] = `
+<AddressAutocomplete
+  debounce={450}
+  id="testField"
+  label="Address"
+  name="testField"
+  type="text"
+>
+  <div
+    className="to-address-autocomplete"
+    id="to-address-autocomplete-testField"
+  >
+    <PlacesAutocomplete
+      debounce={450}
+      highlightFirstSuggestion={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onError={[Function]}
+      onSelect={[Function]}
+      searchOptions={
+        Object {
+          "componentRestrictions": Object {
+            "country": "ca",
+          },
+        }
+      }
+      shouldFetchSuggestions={false}
+      value=""
+    >
+      <input
+        aria-autocomplete="list"
+        aria-expanded={false}
+        aria-label="Address"
+        aria-labelledby="to-address-autocomplete-testField-label"
+        autoComplete="autocomplete_off_1234567890"
+        className="to-input-field"
+        debounce={450}
+        disabled={false}
+        id="testField"
+        name="testField"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        role="combobox"
+        type="text"
+        value=""
+      />
+      <Label
+        className="to-input-label"
+        htmlFor="testField"
+        id="to-address-autocomplete-testField-label"
+      >
+        <label
+          className="to-input-label"
+          htmlFor="testField"
+          id="to-address-autocomplete-testField-label"
+        >
+          Address
+        </label>
+      </Label>
+      <div
+        className="to-address-autocomplete-choices"
+      >
+        <ul />
+      </div>
+    </PlacesAutocomplete>
+  </div>
+</AddressAutocomplete>
+`;
+
+exports[`AddressAutocomplete should match snapshot 1`] = `
+<div
+  className="to-address-autocomplete"
+  id="to-address-autocomplete-testField"
+>
+  <PlacesAutocomplete
+    debounce={450}
+    highlightFirstSuggestion={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onError={[Function]}
+    onSelect={[Function]}
+    searchOptions={
+      Object {
+        "componentRestrictions": Object {
+          "country": "ca",
+        },
+      }
+    }
+    shouldFetchSuggestions={false}
+    value=""
+  >
+    <Component />
+  </PlacesAutocomplete>
+</div>
+`;

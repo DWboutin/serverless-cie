@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatTwoNumbers should match snapshot 1`] = `
+<CardStat
+  className="to-stat-sonar"
+  icon={
+    <Icon
+      type="notification"
+    />
+  }
+  title="Taux d'accceptation"
+  type="bordered"
+>
+  <div
+    className="sonar"
+  >
+    <div
+      className="inner-sonar"
+    >
+      <div
+        className="number"
+      >
+        <span>
+          <CountUp$$1
+            decimal="."
+            decimals={0}
+            delay={null}
+            duration="2"
+            easingFn={null}
+            end={60}
+            formattingFn={null}
+            onEnd={[Function]}
+            onPauseResume={[Function]}
+            onReset={[Function]}
+            onStart={[Function]}
+            onUpdate={[Function]}
+            prefix=""
+            redraw={false}
+            separator=""
+            start={0}
+            suffix=""
+            useEasing={true}
+          />
+          h
+        </span>
+      </div>
+    </div>
+    <div
+      className="icon-sonar"
+    >
+      <div
+        className="icon-sonar-wrap"
+      >
+        <span>
+          <Icon
+            type="marker"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</CardStat>
+`;

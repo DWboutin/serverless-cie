@@ -1,0 +1,5 @@
+{
+  "hooks": {
+    "pre-commit": "npm run format && npm run transpile && npm run test:coverage && git add --all"
+  }
+}

@@ -1,0 +1,29 @@
+@import './variables';
+
+@mixin responsive($size){
+  @if $size == 'x-large' {
+    @media (min-width: $screen-xl){
+      @content
+    }
+  }
+  @if $size == 'large' {
+    @media (min-width: $screen-lg) and (max-width: $screen-xl - 1) {
+      @content
+    }
+  }
+  @if $size == 'normal' {
+    @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+      @content
+    }
+  }
+  @if $size == 'tablet' {
+    @media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+      @content
+    }
+  }
+  @if $size == 'phone to tablet' {
+    @media (max-width: $screen-sm - 1) {
+      @content
+    }
+  }
+}

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea should match snapshot 1`] = `
+<div
+  className="to-textarea"
+  id="to-textarea-test-textarea"
+>
+  <textarea
+    aria-labelledby="to-textarea-test-textarea-label"
+    className="to-textarea-field"
+    id="test-textarea"
+    name="test-textarea"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    value=""
+  />
+</div>
+`;
+
+exports[`TextArea should match snapshot with an injected value in props 1`] = `
+<div
+  className="to-textarea active"
+  id="to-textarea-test-textarea"
+>
+  <textarea
+    aria-labelledby="to-textarea-test-textarea-label"
+    className="to-textarea-field"
+    id="test-textarea"
+    name="test-textarea"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    value="hello"
+  />
+</div>
+`;

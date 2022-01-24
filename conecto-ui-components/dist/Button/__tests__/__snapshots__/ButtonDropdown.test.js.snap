@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonDropdown should match snapshot 1`] = `
+<div
+  className="to-btn-dropdown-wrapper"
+>
+  <button
+    className="to-btn to-btn-dropdown to-btn-primary"
+    onClick={[Function]}
+    type="button"
+  >
+    Test 1234
+  </button>
+  <div
+    className="to-btn-dropdown-menu"
+  >
+    <ul>
+      <li
+        key="btn-drop-0"
+      >
+        <mockConstructor
+          to="/test"
+        >
+          Test 1
+        </mockConstructor>
+      </li>
+      <li
+        key="btn-drop-1"
+      >
+        <mockConstructor
+          to="/test"
+        >
+          Test 2
+        </mockConstructor>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`ButtonDropdown should match snapshot without links 1`] = `
+<div
+  className="to-btn-dropdown-wrapper"
+>
+  <button
+    className="to-btn to-btn-dropdown to-btn-primary"
+    onClick={[Function]}
+    type="button"
+  >
+    Test 1234
+  </button>
+</div>
+`;

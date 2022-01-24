@@ -1,0 +1,636 @@
+@import '../_base/variables';
+
+.to-card {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  padding: 40px;
+
+  &.to-card-bordered {
+    border: 1px solid $veryPaleBrown;
+  }
+
+  &.to-card-shadowed {
+    box-shadow: 0px 0px 15px rgba(85, 62, 65, 0.15);
+  }
+
+  .icon-wrapper {
+    display: inline-block;
+    position: absolute;
+    top: -31px;
+    left: 40px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: $paleGrey;
+    padding: 13px 0 0 17px;
+  }
+
+  &:not(.to-card-with-icon) {
+    overflow: hidden;
+  }
+
+  &.to-card-with-icon {
+    .icon-wrapper .to-icon {
+      display: block;
+      position: relative;
+      width: 34px;
+      height: 34px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.to-card-cta {
+    display: flex;
+    flex-flow: wrap;
+    overflow: visible;
+    padding: 0;
+    border: 0;
+
+    &.with-overlap {
+      .cta {
+        .image {
+          .image-wrap {
+            height: 120%;
+          }
+        }
+      }
+    }
+
+    &>div {
+      flex: 0 0 50%;
+    }
+
+    .content {
+      padding: 38px 32px 36px;
+      border-top: 1px solid $veryPaleBrown;
+      border-left: 1px solid $veryPaleBrown;
+      border-bottom: 1px solid $veryPaleBrown;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .cta {
+      position: relative;
+      background-color: $paleGreen;
+      border-top: 1px solid $paleGreen;
+      border-right: 1px solid $paleGreen;
+      border-bottom: 1px solid $paleGreen;
+      border-radius: 0 10px 10px 0;
+      align-items: center;
+      justify-content: center;
+
+      .image {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+
+        .image-wrap {
+          display: block;
+          position: absolute;
+          bottom: 0px;
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 0 10px 10px 0;
+
+          svg {
+            display: block;
+            position: absolute;
+            min-width: 100%;
+            max-height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  &.to-card-opportunity {
+    padding: 0;
+    border: 1px solid $veryPaleBrown;
+
+    header {
+      display: flex;
+      position: relative;
+      flex: 0 1 auto;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      border-bottom: 1px solid $veryPaleBrown;
+
+      &>div {
+        display: inline-block;
+        flex: 0 0 50%;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+
+      .to-logo-wrapper {
+        width: 100%;
+      }
+
+      .opportunity-id {
+        font-family: StyreneA, Arial, Helvetica, sans-serif;
+        font-size: sizeToRem(14);
+        font-weight: normal;
+        line-height: normal;
+        letter-spacing: 0.02em;
+        margin-bottom: 4px;
+        text-align: right;
+      }
+      .opportunity-time {
+        font-family: Sailec, Arial, Helvetica, sans-serif;
+        font-size: sizeToRem(12);
+        line-height: sizeToRem(18);
+        color: $paleBrown;
+        text-align: right;
+      }
+      .remaining-places {
+        display: inline-block;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        font-family: Sailec, Arial, Helvetica, sans-serif;
+        font-size: sizeToRem(12);
+        line-height: sizeToRem(18);
+        color: $paleBrown;
+        border-radius: 5px;
+        text-align: center;
+        padding: 10px 15px 10px;
+        border: 1px solid $veryPaleBrown;
+        background-color: #fff;
+        z-index: 1;
+      }
+    }
+
+    footer {
+      padding: 30px;
+      text-align: right;
+      border-top: 1px solid $veryPaleBrown;
+
+      .to-btn {
+        margin-left: 20px;
+      }
+    }
+
+    &.has-accordion {
+      .to-card-wrap {
+        .to-card-content {
+          padding: 30px 30px 10px;
+        }
+      }
+    }
+
+    .to-card-wrap {
+      .to-card-content {
+        padding: 30px;
+      }
+
+      .to-card-map {
+        display: block;
+        position: relative;
+        text-align: center;
+        height: 180px;
+        min-width: 100%;
+        overflow: hidden;
+        border-bottom: 1px solid $veryPaleBrown;
+
+        img {
+          position: absolute;
+          top: -9999px;
+          bottom: -9999px;
+          left: -9999px;
+          right: -9999px;
+          margin: auto;
+          min-width: 100%;
+        }
+      }
+
+      .to-accordion {
+        .to-accordion-panel {
+          .to-accordion-panel-title {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .arrow {
+              right: 30px;
+            }
+          }
+          .to-accordion-panel-content {
+            .content-wrap {
+              padding-left: 30px;
+              padding-right: 30px;
+            }
+          }
+        }
+      }
+
+      .label {
+        font-family: Sailec, Arial, Helvetica, sans-serif;
+        font-size: sizeToRem(12);
+        line-height: sizeToRem(18);
+        color: $paleBrown;
+      }
+
+      .value {
+        display: block;
+        position: relative;
+        font-family: Sailec, Arial, Helvetica, sans-serif;
+        font-size: sizeToRem(14);
+        line-height: sizeToRem(21);
+        color: $darkBrown;
+        
+        .to-icon {
+          display: inline-block;
+          position: relative;
+          margin-right: 5px;
+          top: -2px;
+        }
+      }
+
+      .opportunity-city,
+      .opportunity-job {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .opportunity-job {
+        display: flex;
+        position: relative;
+        flex: 0 1 auto;
+
+        &>div {
+          display: inline-block;
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+
+  &.to-card-lead {
+    padding: 0;
+    border: 1px solid $veryPaleBrown;
+
+    header {
+      display: flex;
+      position: relative;
+      flex: 0 1 auto;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      border-bottom: 1px solid $veryPaleBrown;
+
+      &>div {
+        display: inline-block;
+        flex: 0 0 50%;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+
+      .to-logo-wrapper {
+        width: 100%;
+      }
+
+      .opportunity-id {
+        font-family: StyreneA, Arial, Helvetica, sans-serif;
+        font-size: sizeToRem(18);
+        font-weight: normal;
+        line-height: normal;
+        letter-spacing: 0.02em;
+        margin-bottom: 4px;
+        text-align: right;
+      }
+      .opportunity-time {
+        font-family: Sailec, Arial, Helvetica, sans-serif;
+        font-size: sizeToRem(12);
+        line-height: sizeToRem(18);
+        color: $paleBrown;
+        text-align: right;
+      }
+    }
+
+    footer {
+      display: flex;
+      position: relative;
+      flex: 0 1 auto;
+      border-top: 1px solid $veryPaleBrown;
+
+
+      &>div {
+        display: inline-block;
+        flex: 0 0 50%;
+        padding: 30px;
+
+        &:first-child {
+          border-right: 1px solid $veryPaleBrown;
+        }
+
+        .info {
+          margin-bottom: 20px;
+
+          .to-checkbox {
+            margin-right: 10px;
+
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+
+    .contact-actions {
+      text-align: center;
+
+      &>div {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .label {
+      font-family: Sailec, Arial, Helvetica, sans-serif;
+      font-size: sizeToRem(12);
+      line-height: sizeToRem(18);
+      color: $paleBrown;
+      margin-bottom: 5px;
+    }
+
+    .value {
+      display: block;
+      position: relative;
+      font-family: Sailec, Arial, Helvetica, sans-serif;
+      font-size: sizeToRem(14);
+      line-height: sizeToRem(21);
+      color: $darkBrown;
+
+      .to-icon {
+        display: inline-block;
+        position: relative;
+        margin-right: 5px;
+        top: -2px;
+      }
+    }
+
+    &.has-accordion {
+      .to-card-wrap {
+        .to-card-content {
+          padding: 30px 30px 10px;
+        }
+      }
+    }
+
+    .to-card-wrap {
+      .to-card-map {
+        display: block;
+        position: relative;
+        text-align: center;
+        height: 250px;
+        min-width: 100%;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          top: -9999px;
+          bottom: -9999px;
+          left: -9999px;
+          right: -9999px;
+          margin: auto;
+          min-width: 100%;
+        }
+      }
+
+      .to-accordion {
+        .to-accordion-panel {
+          .to-accordion-panel-title {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .arrow {
+              right: 30px;
+            }
+          }
+          .to-accordion-panel-content {
+            .content-wrap {
+              padding-left: 30px;
+              padding-right: 30px;
+            }
+          }
+        }
+      }
+
+      .to-card-content {
+        display: flex;
+        position: relative;
+        flex: 0 1 auto;
+        padding: 30px;
+
+        & > div {
+          display: inline-block;
+          flex: 0 0 33%;
+        }
+      }
+
+      .to-accordion {
+        .to-accordion-panel {
+          .to-accordion-panel-title {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .arrow {
+              right: 30px;
+            }
+          }
+          .to-accordion-panel-content {
+            .content-wrap {
+              padding-left: 30px;
+              padding-right: 30px;
+            }
+          }
+        }
+      }
+
+      .opportunity-job {
+        display: flex;
+        position: relative;
+        flex: 0 1 auto;
+
+        &>div {
+          display: inline-block;
+          flex: 0 0 50%;
+        }
+      }
+    }
+  }
+
+  &.to-card-stat {
+    text-align: center;
+    padding: 12px 14px 18px;
+
+    .header {
+      text-align: left;
+
+      .circle {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: $paleGrey;
+        border-radius: 50%;
+        text-align: center;
+
+        i {
+          font-size: 20px;
+          line-height: 40px;
+          color: $green;
+        }
+      }
+
+      .title {
+        margin-left: 12px;
+        font-family: Sailec, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
+
+.to-cards-swiper {
+  overflow: hidden;
+
+  .swiper-wrapper {
+    .swiper-slide:last-child {
+      margin-right: 0px !important;
+    }
+  }
+
+  &.with-icons {
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+  .to-cards-swiper {
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+  .to-cards-swiper {
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 90%;
+      }
+    }
+  }
+
+  .to-card {
+    &.to-card-cta {
+      flex-direction: column;
+
+      &>div {
+        flex: 1 0 50%;
+      }
+      .content {
+        padding: 38px 32px 36px;
+        border-top: 1px solid $veryPaleBrown;
+        border-left: 1px solid $veryPaleBrown;
+        border-right: 1px solid $veryPaleBrown;
+        border-bottom: 0px solid $veryPaleBrown;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .cta {
+        position: relative;
+        background-color: $paleGreen;
+        border-top: 0px solid $paleGreen;
+        border-right: 1px solid $paleGreen;
+        border-left: 1px solid $paleGreen;
+        border-bottom: 1px solid $paleGreen;
+        border-radius: 0 0 10px 10px;
+
+        .image {
+          padding: 38px 32px 36px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .to-cards-swiper {
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 90%;
+      }
+    }
+  }
+
+  .to-card {
+    &.to-card-cta {
+      flex-direction: column;
+
+      &>div {
+        flex: 1 0 50%;
+      }
+      .content {
+        padding: 38px 32px 36px;
+        border-top: 1px solid $veryPaleBrown;
+        border-left: 1px solid $veryPaleBrown;
+        border-right: 1px solid $veryPaleBrown;
+        border-bottom: 0px solid $veryPaleBrown;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .cta {
+        position: relative;
+        background-color: $paleGreen;
+        border-top: 0px solid $paleGreen;
+        border-right: 1px solid $paleGreen;
+        border-left: 1px solid $paleGreen;
+        border-bottom: 1px solid $paleGreen;
+        border-radius: 0 0 10px 10px;
+
+        .image {
+          padding: 38px 32px 36px;
+        }
+
+        .image-wrap {
+          max-height: 110%;
+
+          svg {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

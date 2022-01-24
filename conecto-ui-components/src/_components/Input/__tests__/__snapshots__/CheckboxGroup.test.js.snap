@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxGroup should match snapshot 1`] = `
+<div
+  className="to-checkbox-group"
+>
+  <Label
+    className="to-checkbox-group-label"
+  >
+    Checkbox group
+  </Label>
+  <Checkbox
+    checked={true}
+    id="testField"
+    label="Test field"
+    name="testField"
+  />
+  <Checkbox
+    id="testField2"
+    label="Test field 2"
+    name="testField2"
+  />
+  <InputError>
+    Group error
+  </InputError>
+</div>
+`;

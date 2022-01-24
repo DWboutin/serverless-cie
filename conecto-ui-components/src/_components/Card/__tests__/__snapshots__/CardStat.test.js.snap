@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardStat should match snapshot 1`] = `
+<div
+  className="to-card to-card-bordered to-card-stat"
+>
+  <div
+    className="header"
+  >
+    <span
+      className="circle"
+    >
+      <Icon
+        type="conecto"
+      />
+    </span>
+    <span
+      className="title"
+    >
+      Test title card
+    </span>
+  </div>
+  <div
+    className="to-card-wrap"
+  >
+    Test 1
+  </div>
+</div>
+`;
+
+exports[`CardStat should match snapshot with shadow 1`] = `
+<div
+  className="to-card to-card-shadowed to-card-stat"
+>
+  <div
+    className="header"
+  >
+    <span
+      className="circle"
+    >
+      <Icon
+        type="conecto"
+      />
+    </span>
+    <span
+      className="title"
+    >
+      Test title card
+    </span>
+  </div>
+  <div
+    className="to-card-wrap"
+  >
+    Test 1
+  </div>
+</div>
+`;

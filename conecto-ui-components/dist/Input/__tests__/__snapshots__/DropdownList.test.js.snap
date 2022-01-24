@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownList should match snapshot 1`] = `
+<DropdownList
+  id="test-dropdown"
+  label="test"
+  name="test-dropdown"
+  value=""
+>
+  <div
+    className="to-dropdown-list selected"
+    id="to-dropdown-test-dropdown"
+  >
+    <div
+      className="to-dropdown-list-wrap"
+      onClick={[Function]}
+    >
+      <div
+        className="text"
+      >
+        <DropdownChoice
+          selected={true}
+          value="value 2"
+        >
+          <span
+            className="to-dropdown-choice selected"
+            data-value="value 2"
+          >
+            Value 2
+          </span>
+        </DropdownChoice>
+      </div>
+      <select
+        aria-label="test"
+        aria-labelledby="to-dropdown-list-test-dropdown-label"
+        id="test-dropdown"
+        name="test-dropdown"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        value="value 2"
+      >
+        <option
+          key=".0"
+          value="value 1"
+        >
+          Value
+        </option>
+        <option
+          key=".1"
+          value="value 2"
+        >
+          Value 2
+        </option>
+        <option
+          key=".2"
+          value="value 3"
+        >
+          Value 3
+        </option>
+      </select>
+      <div
+        className="arrow"
+      >
+        <Icon
+          type="arrow-down"
+        >
+          <i
+            aria-label="icon: arrow-down"
+            className="to-icon"
+          >
+            <ArrowDown>
+              <svg
+                className="to-icon-arrow-down"
+                height="8px"
+                version="1.1"
+                viewBox="0 0 14 8"
+                width="14px"
+              >
+                <g
+                  fill="none"
+                  fillRule="evenodd"
+                  stroke="none"
+                  strokeWidth="1"
+                >
+                  <g
+                    stroke="#572D2D"
+                    transform="translate(0.000000, 1.000000)"
+                  >
+                    <polyline
+                      points="12.6702 0 6.68034 6 0.5 0"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </ArrowDown>
+          </i>
+        </Icon>
+      </div>
+    </div>
+    <div
+      className="to-dropdown-list-choices"
+    >
+      <ul>
+        <li
+          className=""
+          key=".0"
+          onClick={[Function]}
+        >
+          <DropdownChoice
+            value="value 1"
+          >
+            <span
+              className="to-dropdown-choice"
+              data-value="value 1"
+            >
+              Value
+            </span>
+          </DropdownChoice>
+        </li>
+        <li
+          className="selected"
+          key=".1"
+          onClick={[Function]}
+        >
+          <DropdownChoice
+            selected={true}
+            value="value 2"
+          >
+            <span
+              className="to-dropdown-choice selected"
+              data-value="value 2"
+            >
+              Value 2
+            </span>
+          </DropdownChoice>
+        </li>
+        <li
+          className=""
+          key=".2"
+          onClick={[Function]}
+        >
+          <DropdownChoice
+            value="value 3"
+          >
+            <span
+              className="to-dropdown-choice"
+              data-value="value 3"
+            >
+              Value 3
+            </span>
+          </DropdownChoice>
+        </li>
+      </ul>
+    </div>
+    <Label
+      className="to-dropdown-list-label"
+      htmlFor="test-dropdown"
+      id="to-dropdown-list-test-dropdown-label"
+    >
+      <label
+        className="to-dropdown-list-label"
+        htmlFor="test-dropdown"
+        id="to-dropdown-list-test-dropdown-label"
+      >
+        test
+      </label>
+    </Label>
+  </div>
+</DropdownList>
+`;

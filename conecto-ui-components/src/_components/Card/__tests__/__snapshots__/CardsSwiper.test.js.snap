@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardsSwiper should match snapshot with cards with icons 1`] = `
+<div
+  className="to-cards-swiper swiper-container"
+  id="swiper"
+>
+  <div
+    className="swiper-wrapper"
+  >
+    <div
+      className="swiper-slide"
+      key=".0"
+    >
+      <Card
+        type="bordered"
+        withIcon={false}
+      >
+        Test 1
+      </Card>
+    </div>
+    <div
+      className="swiper-slide"
+      key=".1"
+    >
+      <Card
+        type="bordered"
+        withIcon={false}
+      >
+        Test 2
+      </Card>
+    </div>
+    <div
+      className="swiper-slide"
+      key=".2"
+    >
+      <Card
+        type="bordered"
+        withIcon={false}
+      >
+        Test 3
+      </Card>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CardsSwiper should match snapshot with cards with icons 2`] = `
+<div
+  className="to-cards-swiper swiper-container with-icons"
+  id="swiper"
+>
+  <div
+    className="swiper-wrapper"
+  >
+    <div
+      className="swiper-slide"
+      key=".0"
+    >
+      <Card
+        icon={
+          <Icon
+            type="colored-flag"
+          />
+        }
+        type="bordered"
+        withIcon={true}
+      >
+        Test 1
+      </Card>
+    </div>
+    <div
+      className="swiper-slide"
+      key=".1"
+    >
+      <Card
+        icon={
+          <Icon
+            type="colored-flag"
+          />
+        }
+        type="bordered"
+        withIcon={true}
+      >
+        Test 2
+      </Card>
+    </div>
+    <div
+      className="swiper-slide"
+      key=".2"
+    >
+      <Card
+        icon={
+          <Icon
+            type="colored-flag"
+          />
+        }
+        type="bordered"
+        withIcon={true}
+      >
+        Test 3
+      </Card>
+    </div>
+  </div>
+</div>
+`;

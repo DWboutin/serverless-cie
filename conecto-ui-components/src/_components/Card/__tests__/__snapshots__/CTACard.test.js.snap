@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot 1`] = `
+<div
+  className="to-card to-card-cta with-overlap"
+>
+  <div
+    className="content"
+  >
+    Test content
+  </div>
+  <div
+    className="cta"
+  >
+    <div
+      className="image"
+    >
+      <div
+        className="image-wrap"
+      >
+        <ContractorSimple />
+      </div>
+      <Button
+        comp="button"
+        htmlType="button"
+        type="primary"
+      >
+        My button here
+      </Button>
+    </div>
+  </div>
+</div>
+`;

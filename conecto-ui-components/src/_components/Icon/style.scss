@@ -1,0 +1,76 @@
+.to-icon {
+  &:not([aria-label="icon: colored-flag"]) {
+    svg {
+      fill: currentcolor;
+
+      path {
+        fill: currentcolor !important;
+      }
+    }
+  }
+  svg {
+    width: 1em;
+    height: 1em;
+    overflow: visible;
+  }
+
+  .to-icon-menu {
+    display: inline-block;
+    position: relative;
+    min-width: 14px;
+    min-height: 14px;
+    width: 100%;
+    height: 100%;
+
+    span {
+      display: block;
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      left: 22%;
+      min-height: 1px;
+      background-color: currentcolor;
+      transition: all 600ms $tansitionEase;
+    }
+
+    span:first-child {
+      top: 13px;
+    }
+
+    span:last-child {
+      bottom: 13px;
+    }
+
+    &.active {
+      span {
+        transition: all 600ms $tansitionEase;
+      }
+
+      span:first-child  {
+        transform: rotate(45deg);
+        top: 50%;
+      }
+      span:last-child  {
+        transform: rotate(-45deg);
+        top: 50%;
+      }
+    }
+  }
+
+  &.active {
+    .to-icon-menu {
+      span {
+        transition: all 600ms $tansitionEase;
+      }
+
+      span:first-child  {
+        transform: rotate(45deg);
+        top: 50%;
+      }
+      span:last-child  {
+        transform: rotate(-45deg);
+        top: 50%;
+      }
+    }
+  }
+}

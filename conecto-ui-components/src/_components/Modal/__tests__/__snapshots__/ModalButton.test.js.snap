@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should match snapshot 1`] = `
+<Fragment>
+  <Button
+    active={false}
+    className="to-modal-button"
+    comp="button"
+    handleClick={[Function]}
+    htmlType="button"
+    type="primary"
+  >
+    Modal text
+  </Button>
+  <Modal
+    handleClose={[Function]}
+    isOpen={false}
+    position={Object {}}
+    withBackground={false}
+  >
+    Test text here
+  </Modal>
+</Fragment>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonGroup should match snapshot 1`] = `
+<div
+  className="to-btn-group"
+>
+  <Button
+    comp="button"
+    htmlType="button"
+    type="primary"
+  >
+    Test1
+  </Button>
+  <Button
+    comp="button"
+    htmlType="button"
+    type="primary"
+  >
+    Test2
+  </Button>
+</div>
+`;

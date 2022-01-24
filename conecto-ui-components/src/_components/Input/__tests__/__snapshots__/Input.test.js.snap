@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should match snapshot 1`] = `
+<div
+  className="to-input"
+  id="to-input-test-input"
+>
+  <input
+    aria-labelledby="to-input-test-input-label"
+    className="to-input-field"
+    id="test-input"
+    name="test-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Input should match snapshot with an injected value in props 1`] = `
+<div
+  className="to-input active"
+  id="to-input-test-input"
+>
+  <input
+    aria-labelledby="to-input-test-input-label"
+    className="to-input-field"
+    id="test-input"
+    name="test-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    type="text"
+    value="hello"
+  />
+</div>
+`;

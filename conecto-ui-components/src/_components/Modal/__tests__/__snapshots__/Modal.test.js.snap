@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should match snapshot when closed 1`] = `""`;
+
+exports[`Modal should match snapshot when open 1`] = `
+<Portal
+  containerInfo={<body />}
+>
+  <div
+    className="to-modal open"
+  >
+    <div
+      className="to-modal-overlay"
+      onClick={[MockFunction]}
+    />
+    <div
+      className="to-modal-card"
+    >
+      <Button
+        className="to-modal-card__close-btn"
+        comp="button"
+        handleClick={[MockFunction]}
+        htmlType="button"
+        type="menu"
+      >
+        <Icon
+          className="active"
+          type="menu"
+        />
+      </Button>
+      <div
+        className="to-modal-content"
+      >
+        Test text here
+      </div>
+    </div>
+  </div>
+</Portal>
+`;

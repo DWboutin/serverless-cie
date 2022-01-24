@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label should match snapshot 1`] = `
+<label
+  className="to-input-label"
+  htmlFor="test-input"
+>
+  Test Label
+</label>
+`;

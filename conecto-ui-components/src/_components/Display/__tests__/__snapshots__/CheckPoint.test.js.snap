@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckPoint should match snapshot with the conecto icon 1`] = `
+<div
+  className="to-check-point"
+>
+  <div
+    className="circle"
+  >
+    <div
+      className="icon"
+    >
+      <Icon
+        type="conecto"
+      />
+    </div>
+  </div>
+  <span
+    className="text"
+  >
+    <span>
+      Test text here
+    </span>
+  </span>
+</div>
+`;
+
+exports[`CheckPoint should match snapshot with the icon by default 1`] = `
+<div
+  className="to-check-point"
+>
+  <div
+    className="circle"
+  >
+    <div
+      className="icon"
+    >
+      <Icon
+        type="check"
+      />
+    </div>
+  </div>
+  <span
+    className="text"
+  >
+    <span>
+      Test text here
+    </span>
+  </span>
+</div>
+`;

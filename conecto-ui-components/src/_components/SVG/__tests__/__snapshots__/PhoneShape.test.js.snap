@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhoneShape should match snapshot 1`] = `
+<svg
+  fill="none"
+  height="438"
+  viewBox="0 0 350 438"
+  width="350"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <g
+    filter="url(#PhoneShape-filter0_d)"
+  >
+    <path
+      d="M15 55C15 32.9086 32.9086 15 55 15H295C317.091 15 335 32.9086 335 55V513H15V55Z"
+      fill="#fff"
+    />
+    <path
+      d="M16 55C16 33.4609 33.4609 16 55 16H295C316.539 16 334 33.4609 334 55V512H16V55Z"
+      stroke="#E5E1E6"
+      strokeWidth="2"
+    />
+  </g>
+  <path
+    d="M92.0005 16V19.8775C92.0005 30.436 100.597 39 111.195 39H232.82C243.418 39 252.014 30.436 252.014 19.8775V16C252 16 91.6785 16.3208 92.0005 16Z"
+    fill="#E5E1E6"
+  />
+  <circle
+    cx="141"
+    cy="28"
+    fill="#B5A4A0"
+    r="3"
+  />
+  <rect
+    fill="#B5A4A0"
+    height="2"
+    rx="1"
+    width="56"
+    x="150"
+    y="27"
+  />
+  <defs>
+    <filter
+      colorInterpolationFilters="sRGB"
+      filterUnits="userSpaceOnUse"
+      height="528"
+      id="PhoneShape-filter0_d"
+      width="350"
+      x="0"
+      y="0"
+    >
+      <feFlood
+        floodOpacity="0"
+        result="BackgroundImageFix"
+      />
+      <feColorMatrix
+        in="SourceAlpha"
+        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+      />
+      <feOffset />
+      <feGaussianBlur
+        stdDeviation="7.5"
+      />
+      <feColorMatrix
+        values="0 0 0 0 0.333333 0 0 0 0 0.243137 0 0 0 0 0.254902 0 0 0 0.15 0"
+      />
+      <feBlend
+        in2="BackgroundImageFix"
+        result="effect1_dropShadow"
+      />
+      <feBlend
+        in="SourceGraphic"
+        in2="effect1_dropShadow"
+        result="shape"
+      />
+    </filter>
+  </defs>
+</svg>
+`;

@@ -1,0 +1,67 @@
+@import '../_base/variables';
+@import '../_base/colors';
+@import '../_base/mixins';
+
+// Parceque tout est dans <main> mettre margin parceque
+main {
+  padding-top: 60px;
+}
+
+.to-site-header {
+  display: block;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $veryPaleBrown;
+  background-color: #fff;
+  z-index: 100;
+
+  .to-grid {
+    height: 100%;
+  }
+
+  .buttons-content {
+    display: flex;
+    justify-content: flex-end;
+
+    &>.to-btn,
+    &>.to-btn-group{
+      margin-left: 15px;
+    }
+  }
+
+  .nav-content {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-content {
+    flex: 0 0 auto;
+  }
+
+  .nav-content {
+    flex: 1 1 auto;
+  }
+
+  .buttons-content {
+    flex: 0 0 auto;
+  }
+}
+
+@include responsive('phone to tablet') {
+  .to-site-header {
+    .logo-content {
+      flex: 1;
+    }
+
+    .nav-content {
+      display: none;
+    }
+
+    .buttons-content {
+      flex: 1;
+    }
+  }
+}

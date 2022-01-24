@@ -1,0 +1,45 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { font-family: 'Sailec', Arial, Helvetica, sans-serif; }
+body, p {
+  color: #572D2D;
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Sailec';
+  font-display: swap;
+  src: local('Sailec'), url('../_base/fonts/Sailec/Sailec-Regular.eot');
+  src: url('../_base/fonts/Sailec/Sailec-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../_base/fonts/Sailec/Sailec-Regular.woff2') format('woff2'),
+       url('../_base/fonts/Sailec/Sailec-Regular.woff') format('woff'),
+       url('../_base/fonts/Sailec/Sailec-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'StyreneA';
+  font-display: swap;
+  src: local('StyreneA'), url('../_base/fonts/Styrene_A/StyreneA-Medium.eot');
+  src: url('../_base/fonts/Styrene_A/StyreneA-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../_base/fonts/Styrene_A/StyreneA-Medium.woff2') format('woff2'),
+  url('../_base/fonts/Styrene_A/StyreneA-Medium.woff') format('woff'),
+  url('../_base/fonts/Styrene_A/StyreneA-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'GT Pressura';
+  font-display: swap;
+  src: local('GT Pressura'), url('../_base/fonts/GT_Pressura/GTPressura-Bold.eot');
+  src: url('../_base/fonts/GT_Pressura/GTPressura-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../_base/fonts/GT_Pressura/GTPressura-Bold.woff2') format('woff2'),
+  url('../_base/fonts/GT_Pressura/GTPressura-Bold.woff') format('woff'),
+  url('../_base/fonts/GT_Pressura/GTPressura-Bold.ttf') format('truetype');
+}

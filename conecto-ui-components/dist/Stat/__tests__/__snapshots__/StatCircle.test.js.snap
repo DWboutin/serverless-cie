@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatCircle should match snapshot 1`] = `
+<CardStat
+  className="to-stat-circle"
+  icon={
+    <Icon
+      type="notification"
+    />
+  }
+  title="Taux d'accceptation"
+  type="bordered"
+>
+  <div
+    className="progress-circle p0 false"
+  >
+    <span>
+      0
+      %
+    </span>
+    <div
+      className="left-half-clipper"
+    >
+      <div
+        className="first50-bar"
+      />
+      <div
+        className="value-bar"
+      />
+    </div>
+  </div>
+  <div
+    className="notice"
+  >
+    + 6.5% / mois précédent
+  </div>
+</CardStat>
+`;

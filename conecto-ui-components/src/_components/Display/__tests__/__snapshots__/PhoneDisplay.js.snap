@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhoneDisplay should match snapshot 1`] = `
+<div
+  className="to-phone-display"
+>
+  <PhoneShape />
+  <div
+    className="phone-wrapper"
+  >
+    <div
+      className="wrapper"
+    >
+      <div
+        className="header"
+      >
+        <div
+          className="logo"
+        >
+          <Logo
+            size={null}
+            suffix={
+              <FormattedMessage
+                id="contractor"
+                values={Object {}}
+              />
+            }
+            type="roofing"
+          />
+        </div>
+        <div
+          className="button"
+        >
+          <Button
+            comp="button"
+            htmlType="button"
+            type="bordered"
+          >
+            question@contect.ca
+          </Button>
+        </div>
+      </div>
+      <div
+        className="content"
+      >
+        <div
+          className="text-content"
+        >
+          test
+        </div>
+        <div
+          className="bottom-svg"
+        >
+          <RoofingPhoneBg />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

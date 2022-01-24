@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch should match snapshot 1`] = `
+<label
+  className="to-switch"
+  htmlFor="test-switch"
+  id="to-switch-test-switch"
+>
+  <div
+    className="to-switch-wrap"
+  >
+    <div
+      className="to-switch-btn"
+    >
+      <input
+        aria-label="test"
+        checked={false}
+        className="to-input-switch"
+        id="test-switch"
+        name="test-switch"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="checkbox"
+      />
+    </div>
+    <div
+      className="to-switch-label"
+    >
+      test
+    </div>
+  </div>
+</label>
+`;
+
+exports[`Switch should match snapshot with checked prop 1`] = `
+<label
+  className="to-switch checked"
+  htmlFor="test-switch"
+  id="to-switch-test-switch"
+>
+  <div
+    className="to-switch-wrap"
+  >
+    <div
+      className="to-switch-btn"
+    >
+      <input
+        aria-label="test"
+        checked={true}
+        className="to-input-switch"
+        id="test-switch"
+        name="test-switch"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        type="checkbox"
+      />
+    </div>
+    <div
+      className="to-switch-label"
+    >
+      test
+    </div>
+  </div>
+</label>
+`;

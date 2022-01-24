@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Col should match mounted snapshot 1`] = `
+<Col
+  alignMiddle={false}
+  fullHeight={false}
+  reverse={false}
+>
+  <div
+    className="col col-xs"
+  >
+    Test
+  </div>
+</Col>
+`;
+
+exports[`Col should match snapshot 1`] = `
+<div
+  className="col col-xs"
+>
+  Test
+</div>
+`;
+
+exports[`Grid should match snapshot 1`] = `
+<div
+  className="to-grid container"
+>
+  Test
+</div>
+`;
+
+exports[`Grid should match snapshot with Row and Col 1`] = `
+<Grid
+  fluid={false}
+  fullHeight={false}
+>
+  <div
+    className="to-grid container"
+  >
+    <Row>
+      <div
+        className="row"
+      >
+        <Col
+          alignMiddle={false}
+          fullHeight={false}
+          reverse={false}
+        >
+          <div
+            className="col col-xs"
+          >
+            Test
+          </div>
+        </Col>
+      </div>
+    </Row>
+  </div>
+</Grid>
+`;

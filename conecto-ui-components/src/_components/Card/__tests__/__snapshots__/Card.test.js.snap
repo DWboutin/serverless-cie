@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot 1`] = `
+<div
+  className="to-card to-card-bordered"
+>
+  <div
+    className="to-card-wrap"
+  >
+    Test 1
+  </div>
+</div>
+`;
+
+exports[`Card should match snapshot with an icon 1`] = `
+<div
+  className="to-card to-card-bordered to-card-with-icon"
+>
+  <div
+    className="icon-wrapper"
+  >
+    <Icon
+      type="colored-flag"
+    />
+  </div>
+  <div
+    className="to-card-wrap"
+  >
+    Test 1
+  </div>
+</div>
+`;

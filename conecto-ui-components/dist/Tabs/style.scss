@@ -1,0 +1,103 @@
+@import '../_base/colors';
+
+.to-tabs {
+  overflow: hidden;
+
+  nav {
+    ul {
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        box-sizing: border-box;
+        -webkit-box-flex: 0;
+        -ms-flex: 1;
+        flex: 1;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        font-family: Sailec, Arial, Helvetica, sans-serif;
+        font-size: sizeToRem(14);
+        text-align: center;
+        line-height: 1.5em;
+        justify-content: center;
+        height: 50px;
+        cursor: pointer;
+        color: $veryPaleBrown;
+        border-bottom: 2px solid $veryPaleBrown;
+
+        span {
+          pointer-events: none;
+        }
+
+        &.active,
+        &:hover {
+          color: $darkBrown;
+          border-bottom: 2px solid $darkBrown;
+        }
+
+        &.click-disabled {
+          cursor: default;
+
+          &:not(.active):hover {
+            color: $veryPaleBrown;
+            border-bottom: 2px solid $veryPaleBrown;
+          }
+        }
+      }
+    }
+  }
+
+  &-panels {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-transition: margin-left 300ms $tansitionEase;
+    transition: margin-left 300ms $tansitionEase;
+    will-change: margin-left;
+    width: 100%;
+
+    .to-tabs-panel {
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      width: 100%;
+      opacity: 1;
+      -webkit-transition: opacity 150ms;
+      transition: opacity 150ms;
+
+      &.inactive {
+        height: 0;
+        padding: 0 !important;
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+}

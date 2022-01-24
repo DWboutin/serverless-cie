@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Bordered should match snapshot 1`] = `
+<button
+  className="to-btn to-btn-bordered"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button Filter should match snapshot 1`] = `
+<button
+  className="to-btn to-btn-filter"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button Ghost should match snapshot 1`] = `
+<button
+  className="to-btn to-btn-ghost"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button Menu should match snapshot 1`] = `
+<button
+  className="to-btn to-btn-menu"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button Menu should match snapshot with the menu icon 1`] = `
+<button
+  className="to-btn to-btn-menu"
+  type="button"
+>
+  test
+  <Icon
+    type="menu"
+  />
+</button>
+`;
+
+exports[`Button Primary should match snapshot 1`] = `
+<button
+  className="to-btn to-btn-primary"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button Primary should match snapshot with an Icon 1`] = `
+<mockConstructor
+  className="to-btn to-btn-primary"
+  type=""
+>
+  <Icon
+    type="conecto"
+  />
+  Test
+</mockConstructor>
+`;
+
+exports[`Button Switch should match snapshot 1`] = `
+<button
+  className="to-btn to-btn-switch"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button Underlined should match snapshot 1`] = `
+<button
+  className="to-btn to-btn-underlined"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button With Gatsby's Link component should match snapshot 1`] = `
+<mockConstructor
+  className="to-btn to-btn-primary"
+  type=""
+>
+  Test
+</mockConstructor>
+`;

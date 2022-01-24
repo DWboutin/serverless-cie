@@ -1,0 +1,47 @@
+@import '../_base/colors';
+
+.to-btn-group {
+  display: inline-block;
+  position: relative;
+
+  .to-btn {
+    &:first-child {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+
+      &.to-btn-roofing {
+        border-right: 1px solid lighten($roofing, 10%);
+      }
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+
+      &.to-btn-roofing {
+        border-right: 1px solid lighten($roofing, 10%);
+        border-left: 1px solid darken($roofing, 10%);
+      }
+    }
+
+    &:last-child {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+
+      &.to-btn-roofing {
+        border-left: 1px solid darken($roofing, 10%)
+      }
+    }
+  }
+}
+
+.to-btn {
+  &-roofing {
+    color: #ffffff;
+    background-color: $roofing;
+    box-shadow: 0px 0px 0px rgba($roofing, 0);
+
+    &::before {
+      box-shadow: 0px 6px 8px rgba($roofing, 0.25);
+    }
+  }
+}

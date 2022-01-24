@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should match snapshot 1`] = `
+<label
+  className="to-checkbox"
+  htmlFor="test-checkbox"
+  id="to-checkbox-test-checkbox"
+>
+  <input
+    aria-label="test"
+    checked={false}
+    className="to-input-checkbox"
+    id="test-checkbox"
+    name="test-checkbox"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    type="checkbox"
+  />
+  <div
+    className="to-checkbox-label"
+  >
+    test
+  </div>
+</label>
+`;
+
+exports[`Checkbox should match snapshot with checked prop 1`] = `
+<label
+  className="to-checkbox checked"
+  htmlFor="test-checkbox"
+  id="to-checkbox-test-checkbox"
+>
+  <input
+    aria-label="test"
+    checked={true}
+    className="to-input-checkbox"
+    id="test-checkbox"
+    name="test-checkbox"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    type="checkbox"
+  />
+  <div
+    className="to-checkbox-label"
+  >
+    test
+  </div>
+</label>
+`;
